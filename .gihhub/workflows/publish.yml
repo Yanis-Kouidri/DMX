@@ -1,0 +1,28 @@
+name: publish
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.13
+          cache: 'pip'
+
+      - name: install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Deploy documentation on GitHub Pages
+        run: mkdocs gh-deploy --force
+      
