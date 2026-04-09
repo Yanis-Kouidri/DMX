@@ -1,6 +1,8 @@
 # DMX
 
-My Ph.D.
+DMX stand for Data Mule eXpress, it's the name of my Ph.D.
+
+The subject is: *Ephemeral communication backbone for data harvesting in wireless sensor networks*
 
 Available here : [DMX](https://Yanis-Kouidri.github.io/DMX/)
 
@@ -8,36 +10,26 @@ Available here : [DMX](https://Yanis-Kouidri.github.io/DMX/)
 
 ### Set up
 
-Create python virtual environment
+Install [uv](https://docs.astral.sh/uv/), then
 
 ```bash
-python3 -m venv .venv
+uv sync
 ```
 
-Load virtual environment
-
-```bash
-source .venv/bin/activate
-```
-
-Install mkdocs
-
-```bash
-pip install -r requirements.txt
-```
+This command will automatically install python, create the virtual environment and install the dependencies.
 
 ### Run
 
 ```bash
-mkdocs serve --open --livereload
+uv run mkdocs serve --open --livereload
 ```
 
 ## Deploy on GitHub pages
 
-To publish it manually
+Even if it's deployed automatically thanks to GitHub action, you can publish it manually :
 
 ```bash
-mkdocs gh-deploy
+uv run mkdocs gh-deploy
 ```
 
 Then it should be available on [DMX GitHub Pages](https://Yanis-Kouidri.github.io/DMX/)
