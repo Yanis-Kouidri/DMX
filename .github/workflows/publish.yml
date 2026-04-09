@@ -15,14 +15,13 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Install python
-        uses: actions/setup-python@v6
+        uses: astral-sh/setup-uv@v8
         with:
-          python-version: 3.13
-          cache: 'pip'
+          enable-cache: true
 
       - name: install dependencies
-        run: pip install -r requirements.txt
+        run: uv sync --frozen
 
       - name: Deploy documentation on GitHub Pages
-        run: mkdocs gh-deploy --force
+        run: uv run mkdocs gh-deploy --force
       
