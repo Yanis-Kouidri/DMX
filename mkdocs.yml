@@ -1,5 +1,8 @@
 site_name: DMX
 site_url : https://yanis-kouidri.github.io/DMX/
+repo_url: https://github.com/yanis-kouidri/DMX
+repo_name: yanis-kouidri/DMX
+edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - Data Mule: data_mule.md
@@ -13,11 +16,16 @@ theme:
   name: material
   logo: assets/mule.png
   favicon: assets/mule.png
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
   features:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.instant
     - navigation.instant.prefetch
+    - content.action.edit
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
