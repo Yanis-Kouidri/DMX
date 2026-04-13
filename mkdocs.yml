@@ -15,8 +15,8 @@ nav:
 theme:
   name: material
   language: en
-  logo: assets/mule.png
-  favicon: assets/mule.png
+  logo: assets/donkey.png
+  favicon: assets/donkey.png
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil
