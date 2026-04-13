@@ -37,8 +37,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: red
-      accent: red
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -48,7 +48,9 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: red
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+extra_css:
+  - stylesheets/extra.css
