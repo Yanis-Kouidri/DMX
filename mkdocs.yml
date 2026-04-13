@@ -1,5 +1,14 @@
 site_name: DMX
 site_url : https://yanis-kouidri.github.io/DMX/
+nav:
+  - Home: index.md
+  - Data Mule: data_mule.md
+  - DTN: dtn.md
+  - Edge Computing: edge_computing.md
+  - Multi-RAT: multi_rat.md
+  - UAV: uav.md
+  - Routing: routing.md
+  - Glossary: glossary.md
 theme:
   name: material
   logo: assets/mule.png
@@ -7,6 +16,8 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.prefetch
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
