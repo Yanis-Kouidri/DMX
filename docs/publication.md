@@ -18,6 +18,8 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Difficulty to Submit**: Very High. Acceptance rates typically hover between 15% and 20%. It is known for a very strict review process and requires a high level of mathematical or experimental novelty.
 
+**Next one***: May 19–22, 2026 — Tokyo, Japan
+
 ### ACM MobiCom
 
 **Full Name**: ACM International Conference on Mobile Computing and Networking
@@ -27,6 +29,8 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 **Expected Paper Types**: Systems-oriented papers, hardware/software for mobile systems, wireless physical layers, and mobile applications. It prioritizes "real-world" implementations and breakthrough system designs.
 
 **Difficulty to Submit**: Extreme. This is arguably the hardest conference in the mobile networking space, with acceptance rates often below 15%. Only papers with significant impact and complete implementation are usually accepted.
+
+**Next one***: May 24–28, 2026-Glasgow, Scotland, UK
 
 ### ACM MobiHoc
 
@@ -38,6 +42,8 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Difficulty to Submit**: High. While smaller in scale than INFOCOM, its niche focus on theory means reviews are mathematically intense. Acceptance rates are around 18-20%.
 
+**Next one***: June 22–25, 2026-Messina, Italy
+
 ### EWSN
 
 **Full Name**: International Conference on Embedded Wireless Systems and Networks
@@ -47,6 +53,8 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 **Expected Paper Types**: Low-power wireless, IoT systems, embedded operating systems, and sensor network deployments.
 
 **Difficulty to Submit**: Medium-High. It is a selective, single-track conference. It favors practical results and validated systems over pure simulations.
+
+**Next one***: September 16–18, 2026-Dresden, Germany
 
 ### IEEE LCN
 
@@ -58,6 +66,8 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Difficulty to Submit**: Medium-High. LCN is highly respected for its longevity and quality. Acceptance rates are usually around 25-30%.
 
+**Next one***: October 7–9, 2026-Coimbra, Portugal
+
 ### IEEE CCNC
 
 **Full Name**: IEEE Consumer Communications & Networking Conference
@@ -68,6 +78,8 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Difficulty to Submit**: Medium. CCNC is more accessible than INFOCOM but still maintains a solid peer-review standard. It is often held alongside CES, making it industry-heavy.
 
+**Next one***: October 26–30, 2026-Austin, Texas, USA
+
 ### MSWiM
 
 **Full Name**: ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems
@@ -77,6 +89,8 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 **Expected Paper Types**: Performance evaluation, analytical modeling, and simulation methodologies for wireless systems.
 
 **Difficulty to Submit**: Medium-High. It requires very strong validation of results, whether through rigorous simulation or analytical proofs. Acceptance is typically around 25%.
+
+**Next one***: October 26–30, 2026-Paris, France
 
 ### IEEE ICC
 
@@ -98,6 +112,8 @@ AI/ML for Communications
 
 **Difficulty to Submit**: Medium. While it is a flagship conference of the IEEE Communications Society, its large scale means it accepts a high volume of papers (typically over 900 per year). The acceptance rate consistently stays around 38–40%. It is less “exclusive” than INFOCOM but remains a highly prestigious venue for telecommunications researchers.
 
+**Next one***: October 25–28, 2026-Rotterdam, Netherlands
+
 ### IEEE Globecom
 
 **Full Name**: IEEE Global Communications Conference
@@ -114,6 +130,8 @@ AI/ML for Communications
 
 **Difficulty to Submit**: Medium. Like ICC, Globecom is a high-volume flagship conference. The review process is rigorous but fair, with an acceptance rate typically hovering between 37% and 40%. The challenge often lies in the sheer competition, as it receives thousands of submissions from around the globe annually.
 
+**Next one***: November 23–26, 2026-Tokyo, Japan
+
 ### IEEE SMARTCOMP
 
 **Full Name**: IEEE International Conference on Smart Computing
@@ -124,6 +142,8 @@ AI/ML for Communications
 
 **Difficulty to Submit**: Medium. This is an emerging and growing conference. It looks for papers that combine computer science with domain-specific “smart” applications.
 
+**Next one***: December 7–11, 2026 - Macao, China
+
 ### IEEE Sensors
 
 **Full Name**: IEEE Sensors Conference
@@ -133,5 +153,7 @@ AI/ML for Communications
 **Expected Paper Types**: Sensor phenomena, modeling of transducers, sensor systems, and sensor applications (biomedical, environmental).
 
 **Difficulty to Submit**: Medium. The focus is more on the hardware and the sensing mechanism itself than the networking protocol. It is the primary venue for sensor technology researchers.
+
+**Next one***: January 9–12, 2027 - Las Vegas, NV, USA
 
 ## Journals
