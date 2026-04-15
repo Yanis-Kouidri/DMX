@@ -12,6 +12,7 @@ nav:
   - UAV: uav.md
   - Routing: routing.md
   - Simulation: simulation.md
+  - Publication: publication.md
   - Glossary: glossary.md
 theme:
   name: material

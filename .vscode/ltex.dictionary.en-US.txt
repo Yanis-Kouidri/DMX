@@ -9,3 +9,11 @@ CupCarbon
 OMNeT
 Contiki
 Energest
+MobiCom
+INFOCOM
+MobiHoc
+EWSN
+CCNC
+MSWiM
+Globecom
+SMARTCOMP
