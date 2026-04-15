@@ -34,7 +34,7 @@ OMNeT++ is used for WSN with the framework Castalia
 
 ## Cooja
 
-Cooja stand for Contiki OS JavaSimulator
+Cooja stand for Contiki OS Java Simulator
 
 Cooja is specialized in IoT simulation. It provides different views, allow exporting packet for a Wireshark analysis. Plus, it allows measuring energy consumption thanks to Energest.
 
@@ -88,3 +88,18 @@ OpenSatKit is an open source software to modelize satellites communication. To m
 - [Website](https://opensatkit.github.io/)
 - [GitHub](https://github.com/OpenSatKit/OpenSatKit)
 - [Docs](https://opensatkit.github.io/docs/)
+
+## ONE
+
+ONE stand for Opportunistic Network Environment simulator. It's a simulator specialized in DTN simulation. ONE is not actively maintained but can still be useful for specific scenario including DTN.
+
+It provides a real time GUI to see packet mobility.
+
+The [original paper](https://www.netlab.tkk.fi/tutkimus/dtn/theone/pub/the_one_simutools.pdf) introducing the ONE software has received over 3,000 citations.
+Its name is: *The ONE simulator for DTN protocol evaluation*.
+
+### Links
+
+- [Website](https://akeranen.github.io/the-one/)
+- [GitHub](https://github.com/akeranen/the-one)
+- [Docs](https://akeranen.github.io/the-one/)
