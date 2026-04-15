@@ -17,3 +17,6 @@ CCNC
 MSWiM
 Globecom
 SMARTCOMP
+autOCampus
+neOCampus
+CIFRE
