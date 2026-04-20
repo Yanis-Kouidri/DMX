@@ -8,21 +8,6 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 ## Conferences :speaking_head:
 
-### IEEE INFOCOM
-
-**Full Name**: IEEE International Conference on Computer Communications
-
-**Rank**: A* (Flagship)
-
-**Expected Paper Types**: Theoretical networking, cross-layer design, protocols, modeling, and large-scale measurements. INFOCOM values heavy technical depth and rigorous performance evaluation.
-
-**Difficulty to Submit**: Very High. Acceptance rates typically hover between 15% and 20%. It is known for a very strict review process and requires a high level of mathematical or experimental novelty.
-
-**Next one**:
-
-- May 18–22, 2026 — Tokyo, Japan
-- May 24-27, 2027 — Honolulu, Hawaii, USA
-
 ### ACM MobiCom
 
 **Full Name**: ACM International Conference on Mobile Computing and Networking
@@ -52,21 +37,6 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 - November 23–26, 2026 — Tokyo, Japan
 - 2027 — Unknown location
-
-### ACM MobiCom
-
-**Full Name**: ACM International Conference on Mobile Computing and Networking
-
-**Rank**: A* (Flagship)
-
-**Expected Paper Types**: Systems-oriented papers, hardware/software for mobile systems, wireless physical layers, and mobile applications. It prioritizes "real-world" implementations and breakthrough system designs.
-
-**Difficulty to Submit**: Extreme. This is arguably the hardest conference in the mobile networking space, with acceptance rates often below 15%. Only papers with significant impact and complete implementation are usually accepted.
-
-**Next one**:
-
-- October 26–30, 2026 — Austin, Texas, USA
-- October 2027 — Unknown location
 
 ### ACM SIGCOMM
 
@@ -100,6 +70,21 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 - September 16–18, 2026 — Dresden, Germany
 
+### IEEE INFOCOM
+
+**Full Name**: IEEE International Conference on Computer Communications
+
+**Rank**: A* (Flagship)
+
+**Expected Paper Types**: Theoretical networking, cross-layer design, protocols, modeling, and large-scale measurements. INFOCOM values heavy technical depth and rigorous performance evaluation.
+
+**Difficulty to Submit**: Very High. Acceptance rates typically hover between 15% and 20%. It is known for a very strict review process and requires a high level of mathematical or experimental novelty.
+
+**Next one**:
+
+- May 18–22, 2026 — Tokyo, Japan
+- May 24-27, 2027 — Honolulu, Hawaii, USA
+
 ### IEEE LCN
 
 **Full Name**: IEEE Conference on Local Computer Networks
@@ -128,20 +113,6 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 - January 9–12, 2026 — Las Vegas, Nevada, USA
 - January 9–12, 2027 — Las Vegas, Nevada, USA
-
-### MSWiM
-
-**Full Name**: ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems
-
-**Rank**: A
-
-**Expected Paper Types**: Performance evaluation, analytical modeling, and simulation methodologies for wireless systems.
-
-**Difficulty to Submit**: Medium-High. It requires very strong validation of results, whether through rigorous simulation or analytical proofs. Acceptance is typically around 25%.
-
-**Next one**:
-
-- October 26–30, 2026 — Paris, France
 
 ### IEEE ICC
 
@@ -250,6 +221,20 @@ AI/ML for Communications
 **Next one**:
 
 - May 24-27, 2026 — Lugano, Switzerland
+
+### MSWiM
+
+**Full Name**: ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems
+
+**Rank**: A
+
+**Expected Paper Types**: Performance evaluation, analytical modeling, and simulation methodologies for wireless systems.
+
+**Difficulty to Submit**: Medium-High. It requires very strong validation of results, whether through rigorous simulation or analytical proofs. Acceptance is typically around 25%.
+
+**Next one**:
+
+- October 26–30, 2026 — Paris, France
 
 ## Journals :newspaper:
 
