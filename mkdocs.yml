@@ -6,6 +6,7 @@ edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - Mind Map: mindmap.md
+  - WSN: wsn.md
   - Data Mule: data_mule.md
   - DTN: dtn.md
   - Edge Computing: edge_computing.md
