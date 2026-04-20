@@ -21,3 +21,6 @@ autOCampus
 neOCampus
 CIFRE
 LoS
+APSCON
+IFIP
+SIGCOMM

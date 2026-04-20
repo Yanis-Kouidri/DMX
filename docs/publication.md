@@ -53,6 +53,39 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 - November 23–26, 2026 — Tokyo, Japan
 - 2027 — Unknown location
 
+### ACM MobiCom
+
+**Full Name**: ACM International Conference on Mobile Computing and Networking
+
+**Rank**: A* (Flagship)
+
+**Expected Paper Types**: Systems-oriented papers, hardware/software for mobile systems, wireless physical layers, and mobile applications. It prioritizes "real-world" implementations and breakthrough system designs.
+
+**Difficulty to Submit**: Extreme. This is arguably the hardest conference in the mobile networking space, with acceptance rates often below 15%. Only papers with significant impact and complete implementation are usually accepted.
+
+**Next one**:
+
+- October 26–30, 2026 — Austin, Texas, USA
+- October 2027 — Unknown location
+
+### ACM SIGCOMM
+
+**Full Name**: ACM Special Interest Group on Data Communication
+
+**Rank**: A* (The absolute gold standard in networking research)
+
+**Expected Paper Types**: Expected Paper Types:
+
+- Research Track: Novel architectures, protocols, and systems for communication networks, including theoretical analysis and rigorous experimental evaluation.
+- Experience Track: (New for 2026) Significant real-world deployment experiences and insights from operating large-scale networked systems.
+- Topic Areas: Cloud/Datacenter networking, 5G/6G, Internet of Things (IoT), network measurement, security, and AI/ML applied to networking.
+
+**Difficulty to Submit**: Extremely High. This is widely considered the most prestigious and difficult venue in the field. With a double-blind review process and a historical acceptance rate hovering between 10% and 15%, it’s where the "landmark" networking papers are born. Expect "brutal but fair" reviews and a high bar for both technical novelty and implementation.
+
+**Next one**:
+
+- August 17–21, 2026 — Denver, Colorado, USA
+
 ### EWSN
 
 **Full Name**: International Conference on Embedded Wireless Systems and Networks
@@ -184,6 +217,39 @@ AI/ML for Communications
 **Next one**:
 
 - October 25–28, 2026 — Rotterdam, Netherlands
+
+### IEEE APSCON
+
+**Full Name**: IEEE Applied Sensing Conference
+
+**Rank**: N/A (A newer conference, established around 2023. It is not yet ranked by CORE as it focuses on industrial application and systems engineering rather than fundamental computer science or theoretical physics).
+
+**Expected Paper Types**: Concrete applications of sensors across vertical markets (Precision Agriculture, e-Mobility, Smart & Connected Health, Industry 4.0, Environmental Monitoring). Focus is on system integration, data processing, and real-world deployments.
+
+**Difficulty to Submit**: Low-Medium. While it follows a rigorous peer-review process, the barrier for entry regarding "fundamental physical innovation" is lower than IEEE Sensors. It prioritizes practical utility, industrial impact, and "end-to-end" solutions.
+
+**Next one**:
+
+- March 15–17, 2027 — Hyderabad, India
+
+### IFIP Networking
+
+**Full Name**: IFIP International Conference on Networking
+
+**Rank**: CORE Rank: B. It is a well-established and highly respected conference in the networking community, often favored by European research institutions. While it sits just below "top-tier" venues like SIGCOMM or INFOCOM, it is regarded as a high-quality venue for fundamental networking research.
+
+**Expected Paper Types**: Original research focused on the conceptual and theoretical foundations of networking. Key themes include:
+
+- Network Architecture and Protocols: SDN/NFV, 6G, network slicing, and programmable data planes.
+- Performance Evaluation: Analytical modeling, simulation, and traffic measurement.
+- Network Science: Topology analysis, graph theory, and complex network dynamics.
+- Emerging Trends: AI/ML for networking, edge computing, and Green ICT (energy-efficient networking).
+
+**Difficulty to Submit**: Medium-High. The conference typically maintains a competitive acceptance rate (usually between 20% and 25%). It requires strong technical validation—papers must demonstrate either rigorous mathematical proofs or comprehensive experimental results (simulations/testbeds). It is more academically "dense" than application-focused conferences like APSCON.
+
+**Next one**:
+
+- May 24-27, 2026 — Lugano, Switzerland
 
 ## Journals :newspaper:
 
