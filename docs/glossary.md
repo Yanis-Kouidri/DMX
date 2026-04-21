@@ -32,9 +32,9 @@
 
  Opportunistic routing is an approach to move data through a network using broadcast nature of wireless communications. In traditional routing approach. A single path is defined between source and destination and used to carry data. That works well and reliable infrastructure such as cable but in wireless communication, a link can fail. Therefore OR uses a candidate set of potential forwarders. It works in three step :
 
-1. **Broadcast**: The sender broadcasts the data packet. Any neighbor in the "candidate set" that successfully receives it becomes a potential relay.
+1. **Broadcast**: The sender broadcasts the data packet. Any neighbor in the “candidate set” that successfully receives it becomes a potential relay.
 2. **Coordination**: The nodes that heard the message talk to each other (or use timers) to decide who is in the best position to move the data closer to the destination.
-3. **Forwarding**: The "best" node (usually the one closest to the target) forwards the packet, and the other nodes discard their copies to avoid duplicates.
+3. **Forwarding**: The “best” node (usually the one closest to the target) forwards the packet, and the other nodes discard their copies to avoid duplicates.
 
 This approach is implemented in different protocol such as ExOR, MORE, EPIDEMIC, PROPHET etc.
 
@@ -57,3 +57,95 @@ Dilution Of Precision, In context of GNSS and wireless positioning, DOP is a mat
 ## Wireless M-Bus (WM-Bus)
 
 Wireless M-Bus is an open standard (EN 13757-4) optimized for automatic reading of meter such heating meter or water consumption meter. It operates over free bands such as 868 MHz, and it's design to last for a long time (up to 10 years). It works with a star topology where it sends periodically his data to the gateway. Furthermore, it's always the meter who sends the data to the gateway, never the opposite. The WM-Bus range is around 40 meters indoors ans 800m outdoor in free field.
+
+## Duty-cycling
+
+## WuR
+
+Wake up Radio
+
+## SAW sensor
+
+## RFID
+
+## RFID UHF
+
+## RFID NFC
+
+## AUV
+
+## FANET
+
+## VANET
+
+## MBN
+
+## LWSN
+
+## MWSN
+
+## WSN-MS
+
+## ETX
+
+## CA-ETX
+
+## OBC
+
+## KNN
+
+## LSTM
+
+## MEC
+
+## SCA
+
+## LPWAN
+
+## RSSI
+
+## NB-IoT
+
+## 3GPP
+
+## LTE-M
+
+## Sigfox
+
+## ISM bands
+
+## SNR
+
+## Spreading Factor (SF)
+
+## mMTC
+
+## ATSSS
+
+## MPTCP
+
+## ATSSS-LL
+
+## Matter
+
+## CSA
+
+## MNT
+
+## PDR
+
+## FLB
+
+## Stochastic
+
+## TOPSIS
+
+## RODENT
+
+## Uruha
+
+## ATSR
+
+## Hop-by-hop routing
+
+## Source routing
