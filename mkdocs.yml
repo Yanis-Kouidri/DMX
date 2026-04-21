@@ -13,6 +13,8 @@ nav:
   - Multi-RAT: multi_rat.md
   - UAV: uav.md
   - Routing: routing.md
+  - Experimentation:
+    - LoRa: experimentation/lora-raspi-esp32.md
   - Simulation: simulation.md
   - Publication: publication.md
   - Glossary: glossary.md
@@ -31,6 +33,7 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.top
+    - navigation.section
     - content.action.edit
     - search.suggest
     - search.highlight
