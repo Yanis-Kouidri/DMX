@@ -60,49 +60,91 @@ Wireless M-Bus is an open standard (EN 13757-4) optimized for automatic reading 
 
 ## Duty-cycling
 
+In case of a sensor, it's a technic to alternate between wake and sleep cycle in order to save battery instead of being always wake. However, during sleep cycle sensor cannot sense neither communicate through radio.
+
 ## WuR
 
-Wake up Radio
+Wake up Radio, low-energy radio in order to listen and wake up the sensor when a mobile sink come close. No payload data will be transmitted through this radio, its only role is to be able to wake up the sensor during its sleeping cycle.
 
 ## SAW sensor
 
+Surface Acoustic Wave sensor, it's a passive sensor (without battery) that can perform a measure and sent back the information only thanks to an electromagnetic wave sent by the collector.
+
 ## RFID
+
+Radio Frequency Identification, method to memorize and give back data in a chip without battery.
 
 ## RFID UHF
 
+RFID Ultra High Frequency, technology using RFID chip to identify object using UHF bands that allow range until 15 meters.
+
 ## RFID NFC
+
+RFID Near Field Communication, technology using RFID chip to communicate on a very short distance (few centimeters). Used in debit card and transport pass for example.
 
 ## AUV
 
+Autonomous Underwater Vehicle
+
 ## FANET
+
+Flying Ad-hoc Network, drones swarm that communicate together.
 
 ## VANET
 
+Vehicle Ad-hoc Network, network of terrestrial vehicles that communicate together.
+
 ## MBN
+
+Mobile Backbone Network, mobile communication backbone by opposition of static communication backbone such as 4G/5G antennas.
 
 ## LWSN
 
+Linear Wireless Sensor Network, network of wireless sensors arrange linearly.
+
 ## MWSN
+
+Mobile Wireless Sensor Network, network of mobile wireless sensors by opposition of fixed sensors.
 
 ## WSN-MS
 
+Wireless Sensors Network with Mobile Sinks.
+
 ## ETX
+
+Expected Transmission Count, metric that estimate the number of transmission required to send a message over one link at an instant T. ETX = 1 → perfect link, ETX = 2 → 50% of packets are lost, etc.
 
 ## CA-ETX
 
+Contact Aware Expected Transmission Count, improvement of ETX metric by taking into account the possibility the link may be cut due to the physical distance. Useful for mobile sink in WSN for example.
+
 ## OBC
+
+Opportunistic Backpressure Protocol, routing protocol using CA-ETX metric.
 
 ## KNN
 
+K-Nearest Neighbor, algorithm used to identify if a variable or a vector (several variables) is normal or is abnormal (anomaly detection)
+
 ## LSTM
+
+Long Short-Therm Memory, IA model to perform prediction
 
 ## MEC
 
+Mobile Edge Computing, strategy focussing on binging computational power closer the network border (therefore closer to the user)
+
 ## SCA
+
+Successive Convex Approximation, operations research algorithm that allow to transform a complex problem (non-convex) into a simple one (convex)
 
 ## LPWAN
 
+Low Power Wide Area Network, network using long range and low power wireless communications such as LoRaWan, LTE-M, NB-IoT, Sigfox.
+
 ## RSSI
+
+Received signal strength indicator, power of received signal by an equipment, often measure in dBm.
 
 ## NB-IoT
 
