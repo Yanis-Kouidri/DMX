@@ -76,3 +76,47 @@ To summarize
     ```
 
 ### Step 3: Run the code
+
+Install uv
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Go on `lora_receiver` and `lora_sender` under the `code` folder.
+
+Install dependencies
+
+```bash
+uv sync
+```
+
+Then run both script, one on each Raspi
+
+```bash
+uv run main.py
+```
+
+Then you should see on the receiver side:
+
+```log
+pi@lora2:~/lora_receiver $ uv run main.py
+--- Pi 5 LoRa Diagnostic Receiver ---
+Pins Set: M0(BCM23)=LOW, M1(BCM24)=LOW
+Connected to /dev/ttyAMA0 at 9600 baud.
+Waiting for data... (Press Ctrl+C to stop)
+DEBUG: AUX Pin went LOW (Module is busy/receiving!)
+DEBUG: AUX Pin went LOW (Module is busy/receiving!)
+Received String: Pi5 LoRa Message #0
+DEBUG: AUX Pin went LOW (Module is busy/receiving!)
+Received String: Pi5 LoRa Message #1
+Received String: Pi5 LoRa Message
+Received String: #2
+Received String: Pi5 LoRa Message #3
+Received String: Pi5 LoRa Message #4
+Received String: Pi5 LoRa Message #5
+```
+
+!!! success
+
+    Congratulation you have set up a LoRa connection between 2 Raspi.
