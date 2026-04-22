@@ -41,3 +41,5 @@ FANET
 AUV
 WuR
 Backpressure
+LoRa
+Ebyte
