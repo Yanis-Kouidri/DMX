@@ -72,8 +72,18 @@ To summarize
 7. Install dependencies
 
     ```bash
-    sudo apt update -y && sudo apt install python3-dev liblgpio-dev
+    sudo apt update -y && sudo apt install -y python3-dev liblgpio-dev
     ```
+
+### Step 3: Configure LoRa Module
+
+In order to get RSSI and to set the same parameter such as UART rate (baud rate) and air date rate you have to flash the send a commande to write the LoRa E220 module register.
+
+To perform that, run 
+
+```bash
+uv run 
+```
 
 ### Step 3: Run the code
 
