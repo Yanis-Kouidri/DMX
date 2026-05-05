@@ -114,15 +114,13 @@ uv run receive.py
 Then you should see on the receiver side:
 
 ```log
-uv run receive.py
---- Récepteur Pi 5 LoRa opérationnel (RSSI Activé) ---
-[14:07:22] Message: Pi5 LoRa Message #0       | Signal: -33 dBm
-[14:07:27] Message: Pi5 LoRa Message #1       | Signal: -7 dBm
-[14:07:32] Message: Pi5 LoRa Message #2       | Signal: -6 dBm
-[14:07:37] Message: Pi5 LoRa Message #3       | Signal: -5 dBm
-[14:07:42] Message: Pi5 LoRa Message #4       | Signal: -6 dBm
+❯ uv run receive.py
+--- Pi 5 LoRa Receiver Operational (RSSI Enabled) ---
+[14:19:55] Message: Pi5 LoRa Message #1       | Signal: -9 dBm
+[14:20:00] Message: Pi5 LoRa Message #2       | Signal: -10 dBm
+[14:20:06] Message: Pi5 LoRa Message #3       | Signal: -10 dBm
 ^C
-Arrêt du script...
+Stopping script...
 ```
 
 !!! success
