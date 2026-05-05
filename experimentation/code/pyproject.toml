@@ -1,0 +1,11 @@
+[project]
+name = "lora-code"
+version = "0.1.0"
+description = "Code to send and receive data between two Raspi."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gpiozero>=2.0.1",
+    "pyserial>=3.5",
+    "rpi-lgpio>=0.6",
+]
