@@ -77,54 +77,52 @@ To summarize
 
 ### Step 3: Configure LoRa Module
 
-In order to get RSSI and to set the same parameter such as UART rate (baud rate) and air date rate you have to flash the send a commande to write the LoRa E220 module register.
-
-To perform that, run 
-
-```bash
-uv run 
-```
-
-### Step 3: Run the code
-
-Install uv
+Install uv once on each raspi
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Go on `lora_receiver` and `lora_sender` under the `code` folder.
-
-Install dependencies
+Install dependencies, go in `DMX/docs/experimentation/code`
 
 ```bash
 uv sync
 ```
 
-Then run both script, one on each Raspi
+In order to get RSSI and to set the same parameter such as UART rate (baud rate) and air date rate you have to flash to send a command to write the LoRa E220 module register.
+
+To perform that, run on **both** receiver and sender:
 
 ```bash
-uv run main.py
+uv run congigure_lora_register.py
+```
+
+### Step 4: Run the code
+
+Go in `DMX/docs/experimentation/code` folder.
+
+Then run `send.py` on one raspi and `receive.py`, one the other one.
+
+```bash
+uv run send.py
+```
+
+```bash
+uv run receive.py
 ```
 
 Then you should see on the receiver side:
 
 ```log
-pi@lora2:~/lora_receiver $ uv run main.py
---- Pi 5 LoRa Diagnostic Receiver ---
-Pins Set: M0(BCM23)=LOW, M1(BCM24)=LOW
-Connected to /dev/ttyAMA0 at 9600 baud.
-Waiting for data... (Press Ctrl+C to stop)
-DEBUG: AUX Pin went LOW (Module is busy/receiving!)
-DEBUG: AUX Pin went LOW (Module is busy/receiving!)
-Received String: Pi5 LoRa Message #0
-DEBUG: AUX Pin went LOW (Module is busy/receiving!)
-Received String: Pi5 LoRa Message #1
-Received String: Pi5 LoRa Message
-Received String: #2
-Received String: Pi5 LoRa Message #3
-Received String: Pi5 LoRa Message #4
-Received String: Pi5 LoRa Message #5
+uv run receive.py
+--- Récepteur Pi 5 LoRa opérationnel (RSSI Activé) ---
+[14:07:22] Message: Pi5 LoRa Message #0       | Signal: -33 dBm
+[14:07:27] Message: Pi5 LoRa Message #1       | Signal: -7 dBm
+[14:07:32] Message: Pi5 LoRa Message #2       | Signal: -6 dBm
+[14:07:37] Message: Pi5 LoRa Message #3       | Signal: -5 dBm
+[14:07:42] Message: Pi5 LoRa Message #4       | Signal: -6 dBm
+^C
+Arrêt du script...
 ```
 
 !!! success
