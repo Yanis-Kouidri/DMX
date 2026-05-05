@@ -5,13 +5,15 @@ from gpiozero import DigitalOutputDevice
 # Pin configuration for NORMAL mode (M0=0, M1=0)
 m0 = DigitalOutputDevice(23, initial_value=False)
 m1 = DigitalOutputDevice(24, initial_value=False)
+BAUD_RATE = 9600
+
 
 def run_lora_receiver():
     print("--- Pi 5 LoRa Receiver Operational (RSSI Enabled) ---")
     
     try:
         # Opening the serial port with a timeout to avoid blocking indefinitely
-        ser = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
+        ser = serial.Serial("/dev/ttyAMA0", BAUD_RATE, timeout=1)
         
         while True:
             # Using read_until to wait for the end of the line (\n)
