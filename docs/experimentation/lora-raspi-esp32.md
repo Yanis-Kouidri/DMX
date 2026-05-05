@@ -126,3 +126,12 @@ Stopping script...
 !!! success
 
     Congratulation you have set up a LoRa connection between 2 Raspi.
+
+### Debug
+
+If message are not received make sure that both LoRa module have same configuration by executing `read_lora_register.py`.
+Go in `DMX/docs/experimentation/code` folder.
+
+```bash
+uv run read_lora_register.py
+```
