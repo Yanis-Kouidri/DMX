@@ -6,13 +6,15 @@ edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - Mind Map: mindmap.md
-  - WSN: wsn.md
-  - Data Mule: data_mule.md
-  - DTN: dtn.md
-  - Edge Computing: edge_computing.md
-  - Multi-RAT: multi_rat.md
-  - UAV: uav.md
-  - Routing: routing.md
+  - Subjects: 
+    - WSN: subjects/wsn.md
+    - Data Mule: subjects/data_mule.md
+    - DTN: subjects/dtn.md
+    - Edge Computing: subjects/edge_computing.md
+    - Multi-RAT: subjects/multi_rat.md
+    - UAV: subjects/uav.md
+    - Routing: subjects/routing.md
+    - Radio: subjects/radio.md
   - Experimentation:
     - LoRa: experimentation/lora-raspi-esp32.md
   - Simulation: simulation.md
@@ -67,6 +69,7 @@ theme:
         name: Switch to system preference
 extra_css:
   - stylesheets/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
 
 markdown_extensions:
   - toc:
@@ -90,6 +93,12 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
 
 extra_javascript:
   - https://unpkg.com/mermaid@11.10/dist/mermaid.min.js
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
