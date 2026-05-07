@@ -15,6 +15,7 @@ nav:
     - UAV: subjects/uav.md
     - Routing: subjects/routing.md
     - Radio: subjects/radio.md
+    - LPWAN: subjects/lpwan.md
   - Experimentation:
     - LoRa: experimentation/lora-raspi-esp32.md
   - Simulation: simulation.md
