@@ -140,19 +140,27 @@ Successive Convex Approximation, operations research algorithm that allow to tra
 
 ## LPWAN
 
-Low Power Wide Area Network, network using long range and low power wireless communications such as LoRaWan, LTE-M, NB-IoT, Sigfox.
+Low Power Wide Area Network, network using long range and low power wireless communications such as LoRaWan, LTE-M, NB-IoT, Sigfox. See [Wikipedia](https://en.wikipedia.org/wiki/Low-power_wide-area_network)
 
 ## RSSI
 
-Received signal strength indicator, power of received signal by an equipment, often measure in dBm.
+Received Signal Strength Indicator, power of received signal by an equipment, often measure in dBm.
 
 ## NB-IoT
 
+Narrow Band Internet of Things, is a LPWAN technology developed by the 3GPP for IoT using 4G and 5G bands.
+
 ## 3GPP
+
+3rd Generation Partnership Project, organism that standardized mobile networks (3G/4G/5G/6G)
 
 ## LTE-M
 
+Long Term Evolution for Machine, LPWAN technology developed by the 3GPP for IoT connection using 4G band (LTE). It provides a good mobility management.
+
 ## Sigfox
+
+Sigfox is a proprietary LPWAN technology that works over unlicenced bands. Sigfox is a company that's own it's private network and managed it. The user only have to by a Sigfox antenna and a subscription to the service, then sigfox relay the received data to an internet endpoint the client choose.
 
 ## ISM bands
 
