@@ -160,7 +160,7 @@ Long Term Evolution for Machine, LPWAN technology developed by the 3GPP for IoT 
 
 ## Sigfox
 
-Sigfox is a proprietary LPWAN technology that works over unlicenced bands. Sigfox is a company that's own it's private network and managed it. The user only have to by a Sigfox antenna and a subscription to the service, then sigfox relay the received data to an internet endpoint the client choose.
+Sigfox is a proprietary LPWAN technology that works over unlicenced bands. Sigfox is a company that's own it's private network and managed it. The user only has to by a Sigfox antenna and a subscription to the service, then Sigfox relay the received data to an internet endpoint the client choose.
 
 ## ISM bands
 
