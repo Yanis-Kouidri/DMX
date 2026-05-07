@@ -28,7 +28,10 @@ def run_lora_receiver():
                 if rssi_byte:
                     rssi_raw = rssi_byte[0]
                     # RSSI calculation for E220: -(256 - value)
-                    rssi_dbm = -(256 - rssi_raw)
+                    if rssi_raw == 0:
+                        rssi_dbm = "No Data"
+                    else:
+                        rssi_dbm = -(256 - rssi_raw)
                     
                     try:
                         # Message decoding (stripping \r\n with strip)
