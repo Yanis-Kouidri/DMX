@@ -198,3 +198,5 @@ It should be taken into account that this is not an open field; the receiver is 
     ``` title="walkout-2.log"
     --8<-- "docs/experimentation/logs/walkout-2.log"
     ```
+
+**Analyze**: The LoRa module is supposed to received up to **-140 dBm** nevertheless I stop receiving as **-72 dBm**. So there is something. The most probable is the Fresnel zone that said that the signal is like an ellipsoid between sender and receiver, so ground absorb a lot of the signal strength. I will try to put the receiver upper to see if there is any difference.
