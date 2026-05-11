@@ -200,3 +200,11 @@ It should be taken into account that this is not an open field; the receiver is 
     ```
 
 **Analyze**: The LoRa module is supposed to received up to **-140 dBm** nevertheless I stop receiving as **-72 dBm**. So there is something. The most probable is the Fresnel zone that said that the signal is like an ellipsoid between sender and receiver, so ground absorb a lot of the signal strength. I will try to put the receiver upper to see if there is any difference.
+
+### Test range 3
+
+I put the LoRa upper of one meter thanks to a coat rack
+
+![LoRa-Upper](images/lora_upper.jpg)
+
+However, the maximum range remains the same. I also try to go on a different location, but I also loose the signal around 500 meter after reaching **-72 dBm**.
