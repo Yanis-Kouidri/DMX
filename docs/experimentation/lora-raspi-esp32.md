@@ -254,3 +254,11 @@ I put the LoRa upper of one meter thanks to a coat rack
 ![LoRa-Upper](images/lora_upper.jpg)
 
 However, the maximum range remains the same. I also try to go on a different location, but I also loose the signal around 500 meter after reaching **-72 dBm**.
+
+### Test range 4
+
+This time I put the LoRa on the top of the coat rack to avoid interferance with the metalic bar
+
+![LoRa-Upper-2](images/lora_upper_2.webp)
+
+However, the maximum range remains the same, but I was able to reach **-75 dBm** before I lost the signal.
