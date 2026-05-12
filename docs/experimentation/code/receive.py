@@ -1,6 +1,29 @@
+import os
+import asyncio
 import serial
 import time
 from gpiozero import DigitalOutputDevice
+from dotenv import load_dotenv
+from telegram import Bot
+
+# Charger les variables d'environnement depuis le fichier .env
+load_dotenv()
+
+# Récupération des variables avec une sécurité
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+
+# Vérification de la présence des identifiants
+if not TOKEN or not CHAT_ID:
+    raise ValueError("Error : TELEGRAM_TOKEN or TELEGRAM_CHAT_ID missing in .env file. Please add them")
+
+
+async def send_telegram_message(text):
+    bot = Bot(token=TOKEN)
+    
+    async with bot:
+        await bot.send_message(chat_id=CHAT_ID, text=text)
+        #print("Telegram message successfully sent")
 
 # Pin configuration for NORMAL mode (M0=0, M1=0)
 m0 = DigitalOutputDevice(23, initial_value=False)
@@ -37,9 +60,9 @@ def run_lora_receiver():
                         # Message decoding (stripping \r\n with strip)
                         decoded_msg = header_data.decode('utf-8', errors='replace').strip()
                         
-                        print(f"[{time.strftime('%H:%M:%S')}] "
-                              f"Message: {decoded_msg: <25} | "
-                              f"Signal: {rssi_dbm} dBm")
+                        log_message = f"[{time.strftime('%H:%M:%S')}] Message: {decoded_msg: <25} | Signal: {rssi_dbm} dBm"
+                        print(log_message)
+                        asyncio.run(send_telegram_message(log_message))
                     except Exception as e:
                         print(f"Decoding error: {header_data.hex().upper()} | RSSI: {rssi_dbm} dBm")
                 
