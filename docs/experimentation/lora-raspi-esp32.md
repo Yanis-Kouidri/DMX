@@ -127,6 +127,52 @@ Stopping script...
 
     Congratulation you have set up a LoRa connection between 2 Raspi.
 
+### Step 5: Automate the script run at boot
+
+Copy `lora-receiver.service` (or `lora-sender.service`) into `/etc/systemd/system/`
+
+Then run load the new configuration with
+
+```bash
+sudo systemctl daemon-reload
+```
+
+And restart the service
+
+```bash
+sudo systemctl restart lora-receiver.service
+```
+
+or
+
+```bash
+sudo systemctl restart lora-sender.service
+```
+
+And to make it automatically start as boot:
+
+```bash
+sudo systemctl enable lora-receiver.service
+```
+
+or
+
+```bash
+sudo systemctl enable lora-sender.service
+```
+
+You can now check log thanks to
+
+```bash
+journalctl -u lora-receiver.service
+```
+
+or
+
+```bash
+journalctl -u lora-sender.service
+```
+
 ### Debug
 
 If message are not received make sure that both LoRa module have same configuration by executing `read_lora_register.py`.
