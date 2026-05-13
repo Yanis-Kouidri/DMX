@@ -257,8 +257,16 @@ However, the maximum range remains the same. I also try to go on a different loc
 
 ### Test range 4
 
-This time I put the LoRa on the top of the coat rack to avoid interferance with the metalic bar
+This time I put the LoRa on the top of the coat rack to avoid interference with the metallic bar
 
 ![LoRa-Upper-2](images/lora_upper_2.webp)
 
 However, the maximum range remains the same, but I was able to reach **-75 dBm** before I lost the signal.
+
+### Test range 5
+
+In order to measure any difference depending on the height I test different height thanks to a rope
+
+![LoRa-Upper-2](images/lora_upper_3.webp)
+
+However, I measure no difference of range or RSSI (lower was **-63dBm**) this day, between high height (5 meters) and low height (2 meters).
