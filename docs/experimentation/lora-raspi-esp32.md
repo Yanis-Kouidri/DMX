@@ -37,6 +37,10 @@ To summarize
 
     RDX on LoRa module is connected to TDX on Raspberry, this is normal. And vice-versa for TDX.
 
+!!! info
+
+    I test the voltage between Vcc and ground of the LoRa module and it's 5V
+
 ### Step 2: Configure Raspi
 
 1. Connect to the raspi over ssh for example the run
