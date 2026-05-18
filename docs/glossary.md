@@ -199,3 +199,18 @@ Sigfox is a proprietary LPWAN technology that works over unlicenced bands. Sigfo
 ## Hop-by-hop routing
 
 ## Source routing
+
+## Mote
+
+A mote is a sensor that have 4 things:
+
+- A sensor equipment to measure a metric such as temperature or humidity.
+- A radio module to communicate remotely.
+- A source of energy such has battery.
+- A microcontroller unit to handle sensing, data transmission and sleep cycle.
+
+Mote are end device on an IoT network.
+
+## ALOHA
+
+ALOHA is a very simple Medium Access Control (MAC) protocol. It works with random access to support, when a station has to transmit it transmit without sensing the channel prior. Collision are frequent, so the reliability rely on ACK messages. In pure ALOHA the maximum throughput is about 18.4% of the channel bandwidth. Pure ALOHA is used in LoRaWAN.
