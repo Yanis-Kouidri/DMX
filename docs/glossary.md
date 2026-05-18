@@ -164,9 +164,15 @@ Sigfox is a proprietary LPWAN technology that works over unlicenced bands. Sigfo
 
 ## ISM bands
 
+Industry Science and Medical frequency bands open to used without any prior authorization or license.
+
 ## SNR
 
+Signal to Noise Ration, metric to evaluate the quality of a radio link. Higher is better.
+
 ## Spreading Factor (SF)
+
+The Spreading Factor is a parameter that defined the ratio between the transmission (throughput) and range. In LoRa, the Spreading Factor is between 7 and 12. At SF7 the throughput is high (~5 kbps) but the range is low (~2 km). At SF12 the throughput is low (~250 bps) but the range is high (+15 km).
 
 ## mMTC
 
