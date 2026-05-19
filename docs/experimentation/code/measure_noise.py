@@ -1,6 +1,8 @@
 import serial
 import time
+import asyncio
 from gpiozero import DigitalOutputDevice, DigitalInputDevice
+from telegram_forward import send_telegram_message
 
 # --- Pin Configuration (Matches your other scripts) ---
 SERIAL_PORT = "/dev/ttyAMA0"
@@ -46,8 +48,9 @@ def measure_rssi_noise():
                     # Calculation: -(256 - RSSI_raw)
                     rssi_dbm = -(256 - rssi_raw)
                     
-                    print(f"[{time.strftime('%H:%M:%S')}] "
-                          f"Ambient noise (Noise Floor): {rssi_dbm} dBm")
+                    message = f"[{time.strftime('%H:%M:%S')}] Ambient noise (Noise Floor): {rssi_dbm} dBm"
+                    print(message)
+                    asyncio.run(send_telegram_message(message))
                 else:
                     # If other data arrives (like messages from a sender), it will be caught here
                     print(f"Read error or no response: {response.hex().upper()}")
