@@ -274,3 +274,15 @@ In order to measure any difference depending on the height I test different heig
 ![LoRa-Upper-2](images/lora_upper_3.webp)
 
 However, I measure no difference of range or RSSI (lower was **-63dBm**) this day, between high height (5 meters) and low height (2 meters).
+
+### RSSI noise
+
+The LoRa module propose an option to measure RSSI noise. Thanks to the `measure_noise.py` script I measure the ambient noise in the building and around. I found a RSSI noise between -60 and -80 dBm. This is really high and that explain why the range in only 500 m. The responsible for this noise is probably the raspi 5 with USB CPU and RAM that generate noise. It also can be external factor such as other devices.
+
+The RSSI noise is all the radio energy on my working frequency that is not my signal.
+
+??? info "Show logs of a walk around Neusta building"
+
+    ``` title="walkout-2.log"
+    --8<-- "docs/experimentation/logs/rssi_noise_1.log"
+    ```
