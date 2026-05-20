@@ -17,7 +17,8 @@ nav:
     - Radio: subjects/radio.md
     - LPWAN: subjects/lpwan.md
   - Experimentation:
-    - LoRa: experimentation/lora-raspi-esp32.md
+    - LoRa - Raspi-Raspi: experimentation/lora-raspi-raspi/lora-raspi-raspi.md
+    - LoRa - Raspi-ESP32: experimentation/lora-raspi-esp32/lora-raspi-esp32.md
   - Simulation: simulation.md
   - Publication: publication.md
   - Glossary: glossary.md

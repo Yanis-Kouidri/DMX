@@ -1,10 +1,8 @@
-# LoRa over Raspberry Pi and ESP32
+# LoRa between Raspberry Pi 5 and Raspberry Pi 5
 
-## LoRa between Raspberry Pi 5 and Raspberry Pi 5
+**Goal**: send messages between 2 Raspberry Pi 5 using LoRa.
 
-Goal: send messages between 2 Raspberry Pi 5 using LoRa.
-
-### Step 1: Connect LoRa Module
+## Step 1: Connect LoRa Module
 
 I use E220-400T30D module from Ebyte and I have a Raspberry Pi 5.
 In order to connect the LoRa module to the Raspi I have to use the 40-pin GPIO (General Purpose Input Output).
@@ -41,7 +39,7 @@ To summarize
 
     I test the voltage between Vcc and ground of the LoRa module and it's 5V
 
-### Step 2: Configure Raspi
+## Step 2: Configure Raspi
 
 1. Connect to the raspi over ssh for example the run
 
@@ -79,7 +77,7 @@ To summarize
     sudo apt update -y && sudo apt install -y python3-dev liblgpio-dev
     ```
 
-### Step 3: Configure LoRa Module
+## Step 3: Configure LoRa Module
 
 Install uv once on each raspi
 
@@ -101,7 +99,7 @@ To perform that, run on **both** receiver and sender:
 uv run congigure_lora_register.py
 ```
 
-### Step 4: Run the code
+## Step 4: Run the code
 
 Go in `DMX/docs/experimentation/code` folder.
 
@@ -131,7 +129,7 @@ Stopping script...
 
     Congratulation you have set up a LoRa connection between 2 Raspi.
 
-### Step 5: Automate the script run at boot
+## Step 5: Automate the script run at boot
 
 Copy `lora-receiver.service` (or `lora-sender.service`) into `/etc/systemd/system/`
 
@@ -177,7 +175,7 @@ or
 journalctl -u lora-sender.service
 ```
 
-### Debug
+## Debug
 
 If message are not received make sure that both LoRa module have same configuration by executing `read_lora_register.py`.
 Go in `DMX/docs/experimentation/code` folder.
@@ -186,7 +184,7 @@ Go in `DMX/docs/experimentation/code` folder.
 uv run read_lora_register.py
 ```
 
-### Test range 1
+## Test range 1
 
 In order to test range I put the receiver in the Neusta office and I walk out to see how far it carries.
 
@@ -235,7 +233,7 @@ According to Google Maps I walked up to 278 m from the sender and I got around -
 
 The theoretical range of these modules are up to 10 km, under ideal condition.
 
-### Test range 2
+## Test range 2
 
 This second test pushes the LoRa module to its limits. I took the sender with me and walked to see at what point the signal was lost. I noticed that the signal dropped around this location:
 
@@ -251,7 +249,7 @@ It should be taken into account that this is not an open field; the receiver is 
 
 **Analyze**: The LoRa module is supposed to received up to **-140 dBm** nevertheless I stop receiving as **-72 dBm**. So there is something. The most probable is the Fresnel zone that said that the signal is like an ellipsoid between sender and receiver, so ground absorb a lot of the signal strength. I will try to put the receiver upper to see if there is any difference.
 
-### Test range 3
+## Test range 3
 
 I put the LoRa upper of one meter thanks to a coat rack
 
@@ -259,7 +257,7 @@ I put the LoRa upper of one meter thanks to a coat rack
 
 However, the maximum range remains the same. I also try to go on a different location, but I also loose the signal around 500 meter after reaching **-72 dBm**.
 
-### Test range 4
+## Test range 4
 
 This time I put the LoRa on the top of the coat rack to avoid interference with the metallic bar
 
@@ -267,7 +265,7 @@ This time I put the LoRa on the top of the coat rack to avoid interference with 
 
 However, the maximum range remains the same, but I was able to reach **-75 dBm** before I lost the signal.
 
-### Test range 5
+## Test range 5
 
 In order to measure any difference depending on the height I test different height thanks to a rope
 
@@ -275,7 +273,7 @@ In order to measure any difference depending on the height I test different heig
 
 However, I measure no difference of range or RSSI (lower was **-63dBm**) this day, between high height (5 meters) and low height (2 meters).
 
-### RSSI noise
+## RSSI noise
 
 The LoRa module propose an option to measure RSSI noise. Thanks to the `measure_noise.py` script I measure the ambient noise in the building and around. I found a RSSI noise between -60 and -80 dBm. This is really high and that explain why the range in only 500 m. The responsible for this noise is probably the raspi 5 with USB CPU and RAM that generate noise. It also can be external factor such as other devices.
 
