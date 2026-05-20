@@ -45,3 +45,6 @@ LoRa
 Ebyte
 raspi
 Neusta
+Aquacheck
+Wi-Fi-based
+LoRa-based
