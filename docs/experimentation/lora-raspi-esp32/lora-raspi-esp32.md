@@ -37,3 +37,16 @@ Pin connection tables
 | AUX              | GPIO 4                        |
 | VCC              | VIN                           |
 | GND              | GND                           |
+
+![ESP32-Pinout-Detail](images/esp32-low-power-pinout-schema.webp)
+
+![ESP32-LoRa-connection](images/esp32-lora-connection.webp)
+
+## Experimentation: Wi-Fi Aquacheck Mk3 Battery longevity test
+
+I charge a battery and plug it into *Aquacheck 4* on **21/05/2026 4PM UTC+2**.
+Let's see when the last message is sent to AWS for the sensor.
+
+Battery setting:
+
+![Battery-Detail](images/battery-details.webp)

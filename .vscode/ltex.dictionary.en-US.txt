@@ -48,3 +48,5 @@ Neusta
 Aquacheck
 Wi-Fi-based
 LoRa-based
+GPIO
+Wroom
