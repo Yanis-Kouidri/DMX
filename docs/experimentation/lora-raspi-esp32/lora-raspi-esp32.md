@@ -17,3 +17,23 @@ Using LoRa will reduce these problems.
 ## Experimentation details
 
 To perform a comparison I will put the nominal Aquacheck on battery and measure the lifetime. Then I will use the same Aquacheck with the same battery in the same place and measure the lifetime. The only difference will be the code that no longer rely on Wi-Fi but on LoRa. The sleep cycle will remain the same. The idea is to measure approximately the difference of lifetime between Wi-Fi and LoRa not to perform a precise experimentation over dozen of sensors.
+
+## Hardware used
+
+- uPesy ESP32 Wroom Low Power DevKit (x1)
+- E220-400T30D module from Ebyte (x2)
+- Raspberry Pi 5 (x1)
+
+## Connection ESP32 — LoRa
+
+Pin connection tables
+
+| LoRa Module Pins | ESP32 Wroom Low Power Dev Kit |
+|------------------|-------------------------------|
+| M0               | GPIO 13                       |
+| M1               | GPIO 14                       |
+| RXD              | GPIO 17 (TX2)                 |
+| TDX              | GPIO 16 (RX2)                 |
+| AUX              | GPIO 4                        |
+| VCC              | VIN                           |
+| GND              | GND                           |
