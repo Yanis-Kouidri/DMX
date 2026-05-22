@@ -50,3 +50,5 @@ Wi-Fi-based
 LoRa-based
 GPIO
 Wroom
+Cycléo
+Semtech

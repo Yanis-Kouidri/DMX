@@ -16,6 +16,7 @@ nav:
     - Routing: subjects/routing.md
     - Radio: subjects/radio.md
     - LPWAN: subjects/lpwan.md
+    - LoRa: subjects/lora.md
   - Experimentation:
     - LoRa - Raspi-Raspi: experimentation/lora-raspi-raspi/lora-raspi-raspi.md
     - LoRa - Raspi-ESP32: experimentation/lora-raspi-esp32/lora-raspi-esp32.md
