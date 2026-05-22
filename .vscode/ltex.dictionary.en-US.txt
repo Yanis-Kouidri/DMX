@@ -52,3 +52,5 @@ GPIO
 Wroom
 Cycléo
 Semtech
+FUOTA
+LR-FHSS
