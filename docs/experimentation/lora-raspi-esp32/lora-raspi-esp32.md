@@ -47,6 +47,10 @@ Pin connection tables
 I charge a battery and plug it into *Aquacheck 4* on **21/05/2026 4PM UTC+2**.
 Let's see when the last message is sent to AWS for the sensor.
 
+!!! info
+
+    The soil sensor was not on the soil so only humidity and temperature were sensed
+
 Battery setting:
 
 ![Battery-Detail](images/battery-details.webp)
