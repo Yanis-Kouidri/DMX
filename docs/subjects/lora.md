@@ -22,3 +22,9 @@ Whereas LoRa and LoRaWAN are mature, it remains issues. Here is a non-comprehens
 - **Satellites**: I could be interesting to add satellite connection, but problem appears such as Doppler effect with LEO satellite and intelligent handover between terrestrial network and NTN.
 - **Edge computing and AI**: Reduce message to send using tiny ML model over sensor to do anomaly detection for example.
 - **Zero-Power and energy harvesting**: The idea is to remove battery and to rely only on external source of power such as sun or vibration. That required an opportunistic protocol to send data when energy is available.
+
+## Technical aspects
+
+### Classes
+
+### Spreading Factor (SF)
