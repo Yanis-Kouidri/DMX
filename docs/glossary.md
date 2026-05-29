@@ -220,3 +220,38 @@ Mote are end device on an IoT network.
 ## ALOHA
 
 ALOHA is a very simple Medium Access Control (MAC) protocol. It works with random access to support, when a station has to transmit it transmit without sensing the channel prior. Collision are frequent, so the reliability rely on ACK messages. In pure ALOHA the maximum throughput is about 18.4% of the channel bandwidth. Pure ALOHA is used in LoRaWAN.
+
+## Machine Learning (ML)
+
+Machine Learning is a branch of Artificial Intelligence (AI) focused on developing systems that can learn from data and improve their performance without being explicitly programmed. Instead of following rigid, hand-coded instructions, ML systems use statistical algorithms to identify patterns and perform feature extraction. This process results in a trained model: a mathematical representation that can generalize from its training to make predictions or automate decisions on new, unseen data (such as performing image classification to distinguish between a dog and a cat).
+The learning can be:
+
+- **Supervised Learning**: In this approach, the algorithm is trained on a labeled dataset, where each input is paired with its corresponding correct output (ground truth). The goal is for the model to learn a mapping function that can predict labels for new data. Example: Feeding an algorithm thousands of images tagged "dog" or "cat" so it learns to classify future images.
+- **Non supervised Learning**: This paradigm involves training on unlabeled data. The algorithm must independently discover the underlying structure or hidden patterns within the data. Primary Technique: **Clustering**, which groups data points based on shared characteristics or features (e.g., grouping photos by visual similarity without knowing what the objects are).
+- **Reinforcement Learning (RL)**: This is an agent-based learning method where a system learns to achieve a goal in a dynamic environment through trial and error. The agent receives feedback in the form of rewards or penalties based on the actions it takes, allowing it to optimize its strategy (policy) over time.
+
+Traditional programming uses Rules + Data = Answers. Machine Learning flips the script: Data + Answers = Rules.
+
+## Deep Learning (DL)
+
+In traditional ML, humans perform Feature Engineering. You have to identify the most important characteristics of the data before feeding it into the algorithm. If you choose the wrong features, the model won't work well, regardless of how good the algorithm is.  
+Deep Learning uses Artificial Neural Networks with many layers (hence the "Deep") to perform by itself the feature extraction. It requires massive amounts of data, GPUs and can take days or weeks to train.  
+Whereas classical ML is excellent for Structured Data (things you find in Excel sheets or SQL databases). Deep Learning excels at Unstructured Data, which is data that doesn't fit neatly into a table.
+
+## Agent
+
+In AI, an Agent is a system that can **perceive** its environment and take **actions** to achieve a specific goal.  
+Examples:
+
+- Physical Agent: A Roomba vacuum. Its goal is to clean the floor. Its sensors (bumpers/lasers) provide the observations, and its motors provide the actions.
+- Digital Agent: A trading bot on the stock market. Its goal is profit. Its observations are stock prices, and its actions are buy/sell orders.
+- AI Agent (LLM-based): A tool that you ask to "Book a flight." It doesn't just talk about flights; it actually goes to websites, searches for dates, and interacts with the booking system until the task is done.
+
+## Feature extraction
+
+Feature extraction is the process to extract key characteristics from raw data for the computer to use them to take decision. Example: for dog Vs. cat model, feature could be shape, size and textures.  
+In ML, it is to the user to extract features. This is called feature engineering. In DL it's the role of the neural network.
+
+## Neural network
+
+A neural network is a digital imitation of the human brain. It is composed of several layers of neurons where each neuron takes several inputs, calculates their importance, and decides if it should "fire" a signal to the next layer. The final layer gives you the answer (e.g., "98% Dog, 2% Cat"). Each neuron has weights that represent the importance of an input. These weights are initially random and thanks to feedback weight are adjusted.
