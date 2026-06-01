@@ -44,13 +44,18 @@ Pin connection tables
 
 ## Experimentation: Wi-Fi Aquacheck Mk3 Battery longevity test
 
-I charge a battery and plug it into *Aquacheck 4* on **21/05/2026 4PM UTC+2**.
+Battery setting:
+
+![Battery-Detail](images/battery-details.webp)
+
+### Test 1
+
+I charge a battery and plug it into *Aquacheck 4* on **21/05/2026 4:00 PM UTC+2**.
 Let's see when the last message is sent to AWS for the sensor.
+The last data was sent on **28/05/2026 9:35 AM UTC+2**.
+
+The Aquackeck Mk3 last **6 days and 19h and 35 minutes**.
 
 !!! info
 
     The soil sensor was not on the soil so only humidity and temperature were sensed
-
-Battery setting:
-
-![Battery-Detail](images/battery-details.webp)
