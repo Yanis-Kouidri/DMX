@@ -63,3 +63,7 @@ The Aquacheck Mk3 last **6 days and 19h and 35 minutes**.
 ### Test 2
 
 In this second test, I use the same battery, the same voltage and the same Aquacheck. I just put the soil sensor into water to see if that change something.
+
+- Start time: **01/06/2026 01:55 PM UTC+2**
+- Stop time:
+- Total duration:
