@@ -70,11 +70,14 @@ Battery setting:
 
 ### Test 1
 
-I charge a battery and plug it into *Aquacheck 4* on **21/05/2026 4:00 PM UTC+2**.
-Let's see when the last message is sent to AWS for the sensor.
-The last data was sent on **28/05/2026 9:35 AM UTC+2**.
+In this first test, I charge a battery and plug it into *Aquacheck 4* with the stock Wi-Fi firmware to measure battery longevity.
 
-The Aquacheck Mk3 last **6 days and 19h and 35 minutes**.
+- Start time: **21/05/2026 4:00 PM UTC+2**
+- Stop time: **28/05/2026 9:35 AM UTC+2**
+- Total duration: **6 days, 19 hours and 35 minutes**
+- Battery used: **A**
+- Aquacheck number: **4**
+- Aquacheck ID: **20250522102500**
 
 !!! info
 
@@ -89,3 +92,6 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Start time: **01/06/2026 01:55 PM UTC+2**
 - Stop time:
 - Total duration:
+- Battery used: **A**
+- Aquacheck number: **4**
+- Aquacheck ID: **20250522102500**
