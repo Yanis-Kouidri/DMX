@@ -93,9 +93,9 @@ In this first test, I charge a battery and plug it into *Aquacheck 4* with the s
 
 In this second test, I use the same battery, the same voltage and the same Aquacheck. I just put the soil sensor into water to see if that change something.
 
-- Start time: **01/06/2026 01:55 PM UTC+2**
-- Stop time:
-- Total duration:
+- Start time: **01/06/2026 09:00 AM UTC+2**
+- Stop time: **04/06/2026 10:25 PM UTC+2**
+- Total duration: **3 days, 13 hours and 25 minutes**
 - Battery used: **A**
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
