@@ -99,3 +99,5 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Battery used: **A**
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
+
+![Battery-Detail](images/test2-battery-graph.webp)
