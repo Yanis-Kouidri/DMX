@@ -101,3 +101,13 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Aquacheck ID: **20250522102500**
 
 ![Battery-Detail](images/test2-battery-graph.webp)
+
+### Test 3
+
+- Type: Wi-Fi
+- Start time: **08/06/2026 01:51 PM UTC+2**
+- Stop time:
+- Total duration:
+- Battery used: **A**
+- Aquacheck number: **4**
+- Aquacheck ID: **20250522102500**
