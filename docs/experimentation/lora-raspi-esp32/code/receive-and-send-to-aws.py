@@ -1,4 +1,4 @@
-import asyncio
+import logging
 import serial
 import time
 import json
@@ -26,6 +26,19 @@ BAUD_RATE = 9600
 
 # Global MQTT Client
 mqtt_client = None
+
+# ==========================================
+# LOGS CONFIGURATION
+# ==========================================
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s]: %(message)s",
+    datefmt="%Y-%m-%d | %H:%M:%S",
+    handlers=[
+        logging.StreamHandler() # Envoie les logs dans la console
+    ]
+)
 
 # ==========================================
 # FONCTIONS DE CALCULS DÉRIVÉS ET TEMPS
@@ -61,7 +74,7 @@ def process_and_send_to_aws(decoded_msg):
     """
     global mqtt_client
     if not mqtt_client or not mqtt_client.is_connected():
-        print("[AWS] Erreur : Non connecté à AWS IoT Core. Message ignoré.")
+        logging.info("[AWS] Erreur : Non connecté à AWS IoT Core. Message ignoré.")
         return
 
     try:
@@ -69,7 +82,7 @@ def process_and_send_to_aws(decoded_msg):
         fields = decoded_msg.strip().split(';')
         
         if len(fields) < 5:
-            print(f"[PARSE] Message incomplet (au moins 5 champs requis) : {decoded_msg}")
+            logging.info(f"[PARSE] Message incomplet (au moins 5 champs requis) : {decoded_msg}")
             return
 
         # Extraction des données utiles envoyées par le boîtier
@@ -103,13 +116,13 @@ def process_and_send_to_aws(decoded_msg):
         }
 
         json_payload = json.dumps(payload_dict)
-        print(f"[AWS] Envoi du payload vers le topic '{MQTT_TOPIC}'...")
+        logging.info(f"[AWS] Envoi du payload vers le topic '{MQTT_TOPIC}'...")
         
         # Publication vers AWS (QoS 1)
         mqtt_client.publish(MQTT_TOPIC, json_payload, qos=1)
 
     except Exception as e:
-        print(f"[AWS] Erreur lors du traitement du message : {e}")
+        logging.info(f"[AWS] Erreur lors du traitement du message : {e}")
 
 # ==========================================
 # CALLBACKS MQTT
@@ -117,12 +130,12 @@ def process_and_send_to_aws(decoded_msg):
 
 def on_connect(client, userdata, flags, rc, properties=None):
     if rc == 0:
-        print("[AWS] Connecté avec succès à AWS IoT Core !")
+        logging.info("[AWS] Connecté avec succès à AWS IoT Core !")
     else:
-        print(f"[AWS] Échec de la connexion, code d'erreur : {rc}")
+        logging.info(f"[AWS] Échec de la connexion, code d'erreur : {rc}")
 
 def on_publish(client, userdata, mid, reason_code=None, properties=None):
-    print(f"[AWS] Message MQTT livré avec succès (mid: {mid})")
+    logging.info(f"[AWS] Message MQTT livré avec succès (mid: {mid})")
 
 # ==========================================
 # INITIALISATION MQTT
@@ -130,7 +143,7 @@ def on_publish(client, userdata, mid, reason_code=None, properties=None):
 
 def init_mqtt():
     global mqtt_client
-    print("[AWS] Initialisation du client MQTT...")
+    logging.info("[AWS] Initialisation du client MQTT...")
     
     try:
         mqtt_client = mqtt.Client(callback_api_version=mqtt.CallbackAPIVersion.VERSION2, client_id=CLIENT_ID)
@@ -148,7 +161,7 @@ def init_mqtt():
         tls_version=mqtt.ssl.PROTOCOL_TLSv1_2
     )
 
-    print(f"[AWS] Connexion à l'endpoint {AWS_IOT_ENDPOINT}...")
+    logging.info(f"[AWS] Connexion à l'endpoint {AWS_IOT_ENDPOINT}...")
     mqtt_client.connect(AWS_IOT_ENDPOINT, MQTT_PORT, keepalive=60)
     mqtt_client.loop_start()
 
@@ -157,7 +170,7 @@ def init_mqtt():
 # ==========================================
 
 def run_lora_receiver():
-    print("--- Pi 5 LoRa Receiver & AWS IoT Gateway Operational ---")
+    logging.info("--- Pi 5 LoRa Receiver & AWS IoT Gateway Operational ---")
     
     # Connexion à AWS au démarrage
     init_mqtt()
@@ -187,17 +200,17 @@ def run_lora_receiver():
                         decoded_msg = header_data.decode('utf-8', errors='replace').strip()
                         
                         # Affichage et log local (Telegram)
-                        log_message = f"[{time.strftime('%H:%M:%S')}] Message: {decoded_msg: <25} | Signal: {rssi_dbm} dBm"
-                        print(log_message)
+                        log_message = f"Message: {decoded_msg: <25} | Signal: {rssi_dbm} dBm"
+                        logging.info(log_message)
                         
                         # Traitement et envoi de la charge utile vers AWS avec le nouveau timestamp
                         process_and_send_to_aws(decoded_msg)
                         
                     except Exception as e:
-                        print(f"Erreur décodage: {header_data.hex().upper()} | RSSI: {rssi_dbm} dBm | Erreur: {e}")
+                        logging.info(f"Erreur décodage: {header_data.hex().upper()} | RSSI: {rssi_dbm} dBm | Erreur: {e}")
                 
     except KeyboardInterrupt:
-        print("\nArrêt de la passerelle...")
+        logging.info("\nArrêt de la passerelle...")
     finally:
         if 'ser' in locals() and ser.is_open:
             ser.close()
