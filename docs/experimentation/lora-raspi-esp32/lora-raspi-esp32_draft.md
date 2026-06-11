@@ -56,6 +56,10 @@ The payload from the ESP32 is a semicolon-separated CSV string (`boitier_id; tem
 
 Source: [`code/receive-and-send-to-aws.py`](code/receive-and-send-to-aws.py).
 
+!!! important
+
+    If you have issue during configuration with something like `[LoRa] Réponse config (HEX) : FF FF FF FF`. Try unplug and replug VCC and  GND cable of LoRa module.
+
 ## Aquacheck LoRa branch
 
 To run this architecture, I created a **new branch** on the **Aquacheck** firmware repository. That branch replaces the Wi-Fi/MQTT path with **LoRa**: the ESP32 wakes on the same schedule, reads the sensors, and sends a compact CSV frame to the E220 module. The **Raspberry Pi 5** receives it and forwards data to AWS via [`receive-and-send-to-aws.py`](code/receive-and-send-to-aws.py).
