@@ -76,7 +76,7 @@ Battery setting:
 
 ![Battery-Detail](images/battery-details.webp)
 
-### Test 1
+### Test 1 — Wi-Fi
 
 In this first test, I charge a battery and plug it into *Aquacheck 4* with the stock Wi-Fi firmware to measure battery longevity.
 
@@ -93,7 +93,7 @@ In this first test, I charge a battery and plug it into *Aquacheck 4* with the s
 
 ![Battery-Detail](images/test1-battery-graph.webp)
 
-### Test 2
+### Test 2 — Wi-Fi
 
 In this second test, I use the same battery, the same voltage and the same Aquacheck. I just put the soil sensor into water to see if that change something.
 
@@ -106,7 +106,7 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
 ![Battery-Detail](images/test2-battery-graph.webp)
 
-### Test 3
+### Test 3 — Wi-Fi
 
 - Type: Wi-Fi
 - Start time: **08/06/2026 01:51 PM UTC+2**
@@ -115,3 +115,19 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Battery used: **A**
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
+
+## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
+
+!!! important
+
+    LoRa module need 5V to operate. However ESP32 can only deliver 5V when it's connected to USB C. So to perform a battery test I used a step-up 5V between the 3.7v LiPo battery and the ESP32. The document says explicilty NOT TO DO THAT but actually it's works so I will perform a test like that but it's not recommanded and not scientific to compared 3.7v Wi-Fi and 5v LoRa.
+
+### Test 1 — LoRa
+
+- Type: LoRa
+- Start time:
+- Stop time:
+- Total duration:
+- Battery used: **C**
+- Aquacheck number: **6**
+- Aquacheck ID: **20250520153000**
