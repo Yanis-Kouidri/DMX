@@ -125,7 +125,7 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 ### Test 1 — LoRa
 
 - Type: LoRa
-- Start time:
+- Start time: **11/06/2026 16:55 PM UTC+2**
 - Stop time:
 - Total duration:
 - Battery used: **C**
