@@ -255,3 +255,7 @@ In ML, it is to the user to extract features. This is called feature engineering
 ## Neural network
 
 A neural network is a digital imitation of the human brain. It is composed of several layers of neurons where each neuron takes several inputs, calculates their importance, and decides if it should "fire" a signal to the next layer. The final layer gives you the answer (e.g., "98% Dog, 2% Cat"). Each neuron has weights that represent the importance of an input. These weights are initially random and thanks to feedback weight are adjusted.
+
+## Adaptative Date Rate (ADR)
+
+Adaptive Data Rate (ADR) is a radiocommunication concept where the data rate is dynamically adapted depending on radio link metrics. Basically, if the radio link is bad, the ADR mechanism will reduce the data rate in order to successfully reach the destination. Conversely, if the radio link is good, it will raise the data rate.
