@@ -91,6 +91,10 @@ In this first test, I charge a battery and plug it into *Aquacheck 4* with the s
 
     The soil sensor was not on the soil so only humidity and temperature were sensed
 
+!!! warning
+
+    Data in this test looks weird and irelevant, something probably went wrong. It shoud be ignored.
+
 ![Battery-Detail](images/test1-battery-graph.webp)
 
 ### Test 2 — Wi-Fi
@@ -110,11 +114,14 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
 - Type: Wi-Fi
 - Start time: **08/06/2026 01:51 PM UTC+2**
-- Stop time:
-- Total duration:
+- Stop time: **11/06/2026 9:08 PM UTC+2**
+- Total duration: **3 days, 7 hours and 17 minutes.**
 - Battery used: **A**
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
+
+![Battery-Detail](images/test3-battery-graph.webp)
+
 
 ## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
 
