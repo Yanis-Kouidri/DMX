@@ -122,7 +122,6 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
 ![Battery-Detail](images/test3-battery-graph.webp)
 
-
 ## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
 
 !!! important
@@ -133,8 +132,8 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
 - Type: LoRa
 - Start time: **11/06/2026 16:55 PM UTC+2**
-- Stop time:
-- Total duration:
+- Stop time: **17/06/2026 18:52 PM UTC+2**
+- Total duration: **6 days, 1 hour, and 57 minutes**
 - Battery used: **C**
 - Aquacheck number: **6**
 - Aquacheck ID: **20250520153000**
