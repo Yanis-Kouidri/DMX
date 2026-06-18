@@ -1,123 +1,145 @@
-# Experimental Plan: Battery Lifetime Comparison of an AMK3 IoT Sensor (Wi-Fi vs. LoRa)
+# LoRa between ESP32 and Raspberry Pi 5 (draft)
 
----
+**Goal**: Use an ESP32 to send Aquacheck sensor data to a Raspberry Pi 5 gateway using LoRa. The Raspberry Pi will send sensing data to the MQTT AWS server through internet using Wi-Fi or Ethernet.
 
-## 1. Statistical Hypothesis Formulation
+**Goal 2**: Compare the battery longevity of current Wi-Fi-based Aquacheck sensors against LoRa-based configurations to evaluate power efficiency.
 
-In the context of a scientific publication, the experiment must validate or invalidate a formal hypothesis:
+## Sensor using Wi-Fi: issues
 
-* **Null Hypothesis ($H_0$):** At an equal transmission interval (5 minutes), payload reduction, the absence of TLS handshake, the delegation of timestamping to the LoRa gateway, and the use of the LoRa protocol on the physical layer do not lead to a significant reduction in the system's battery lifetime compared to a Wi-Fi 4 (802.11 b/g/n 2.4GHz) / MQTT / TLS architecture.
-* **Alternative Hypothesis ($H_1$):** The overall system architecture using LoRa for the physical layer significantly increases battery lifetime. This gain is the combined result of a physical layer optimized for low power consumption and the elimination of the listening (RX) and processing (CPU) phases required by the TLS protocol and MQTT session maintenance.
+Currently, the Aquacheck sensor use ESP32 Wi-Fi to send his data to the MQTT AWS server. This is not ideal in terms of energy consumption for the following reason:
 
----
+- At each wake-up (every 5 minutes) the ESP32 has to scan Wi-Fi networks, connect to the good one, wait for an IP address (DHCP). It can take seconds when radio interface is active and radio interface is what consume the most in a sensor.
+- Wi-Fi consume more the other IoT oriented radio technology such as LoRa, Zigbee or Bluetooth Low Energy (BLE).
+- TLS connection between ESP and AWS server involved handshake, encryption, and certificates which add overhead of data to transmit over the radio and CPU usage.
 
-## 2. Specification of the Two Systems (Object of Comparison)
+Using LoRa will reduce these problems.
 
-### System A: The Wi-Fi Architecture
+## Experimentation details
 
-* **Physical Layer (PHY):** ESP32 Wi-Fi Module: Wi-Fi 4 (802.11 b/g/n 2.4GHz)
-* **Software Stack:** AP Association + DHCP + TLS Handshake (Certificate Exchange) + MQTT Connection + MQTT Publish + NTP Server
-* **Payload (JSON):**
+To perform a comparison I will put the nominal Aquacheck on battery and measure the lifetime. Then I will use the same Aquacheck with the same battery in the same place and measure the lifetime. The only difference will be the code that no longer rely on Wi-Fi but on LoRa. The sleep cycle will remain the same. The idea is to measure approximately the difference of lifetime between Wi-Fi and LoRa not to perform a precise experimentation over dozen of sensors.
 
-    ```json
-    {
-      "timestamp": "2026-06-04T00:19:55+0200",
-      "ID": "20250520165000",
-      "type": "AquaCheck",
-      "soilMoisture (%)": "71.00",
-      "temperature": "24.21",
-      "humidity": "48.86",
-      "humidex": "27.57",
-      "batteryLevel": "100.00"
-    }
-    ```
+## Hardware used
 
-* **Hardware Impact:** The CPU remains awake in active mode to handle TLS cryptographic calculations and wait for TCP acknowledgments.
+- uPesy ESP32 Wroom Low Power DevKit (x1)
+- E220-400T30D module from Ebyte (x2)
+- Raspberry Pi 5 (x1)
 
-### System B: The LoRa Architecture
+## Connection ESP32 — LoRa
 
-* **Physical Layer (PHY):**
-  * **LoRa Module:** E220-400T30D module from Ebyte
-  * **Carrier Frequency:** 428.125 MHz (Channel 18)
-  * **UART Baud Rate:** 9600 bps
-  * **Serial Format:** 8N1
-  * **Modulation Speed (Air Speed):** 2.4k bps
-  * **Frame Size:** 200 bytes
-  * **Transmission Power (TX):** 30dBm
-  * **Operating Mode:** Transparent transmission
-  * **Ambient RSSI (LBT):** Enabled
-  * **RSSI at end of message:** Enabled
-  * **LBT Mechanism:** Disabled
-  * **WOR Cycle:** 500ms
-* **Software Stack:** None (pure LoRa communication)
-* **Payload (CSV):**
-  * *Format:* `Sensor_ID;Temperature,Humidity;Soil_Moisture;Battery_Percentage;\n`
-  * *Example:* `20250513142900;26.4;64.5;70;82.8;\n`
-* **Hardware Impact:** Minimal CPU wake-up time. The node transmits blindly (ALOHA mode) and immediately returns to deep sleep.
+Pin connection tables
 
----
+| LoRa Module Pins | ESP32 Wroom Low Power Dev Kit |
+| ---------------- | ----------------------------- |
+| M0               | GPIO 13                       |
+| M1               | GPIO 14                       |
+| RXD              | GPIO 17 (TX2)                 |
+| TDX              | GPIO 16 (RX2)                 |
+| AUX              | GPIO 4                        |
+| VCC              | VIN                           |
+| GND              | GND                           |
 
-## 3. Specification and Control of Variables
+![ESP32-Pinout-Detail](images/esp32-low-power-pinout-schema.webp)
 
-To isolate the impact of the global architecture, variables are classified as follows:
+![ESP32-LoRa-connection](images/esp32-lora-connection.webp)
 
-### A. Independent Variable
+## Gateway script: `receive-and-send-to-aws.py`
 
-* **System A (Wi-Fi 4 / MQTT / TLS / JSON):** Based on the ESP32, requiring an IP infrastructure and a verbose TLS security layer.
-* **System B (Pure LoRa / CSV):** Based on the Ebyte module, utilizing point-to-point communication without any software network layer.
+This script runs on the **Raspberry Pi 5** and acts as a **LoRa-to-cloud gateway** for Aquacheck sensors.
 
-### B. Dependent Variables (Measured Results)
+On startup it connects to **AWS IoT Core** over MQTT (port 8883, TLS with device certificates), then listens on the E220 module via UART (`/dev/ttyAMA0`, normal mode with M0/M1 low). Each incoming LoRa frame is read as a text line followed by one RSSI byte (same E220 convention as the Pi–Pi experiments).
 
-These are the physical/biological indicators of the system that react to the change in architecture:
+The payload from the ESP32 is a semicolon-separated CSV string (`boitier_id; temperature; humidity; soil moisture; battery`). The script parses these fields, stamps the message with the **local reception time** (ISO 8601), computes **humidex** using the same formulas as the Aquacheck firmware, builds a JSON object (`type`, `ID`, sensor values, `humidex`, `batteryLevel`), and publishes it to the `aquacheck/pub` topic on AWS (QoS 1). Received messages and signal strength are logged to the console.
 
-* **Operating Time ($T_{Fail}$):** Total duration between the first transmitted message and hardware shutdown due to power depletion.
-* **Message Count:** Final tally of successfully recorded transmissions on the server.
+Source: [`code/receive-and-send-to-aws.py`](code/receive-and-send-to-aws.py).
 
-### C. Derived Design Variables (Imposed by the Architecture)
+!!! important
 
-Variables intrinsic to the compared architectures:
+    If you have issue during configuration with something like `[LoRa] Réponse config (HEX) : FF FF FF FF`. Try unplug and replug VCC and  GND cable of LoRa module.
 
-* **Payload Size:** ~180 bytes (System A) vs. ~35 bytes (System B).
-* **Peak Current:** Wi-Fi is inherently power-hungry, whereas LoRa transmits here at a high power of 30 dBm (1W), which is counterbalanced by an extremely short time-on-air.
+## Aquacheck LoRa branch
 
-### D. Controlled Variables (Strictly Identical or Neutralized)
+To run this architecture, I created a **new branch** on the **Aquacheck** firmware repository. That branch replaces the Wi-Fi/MQTT path with **LoRa**: the ESP32 wakes on the same schedule, reads the sensors, and sends a compact CSV frame to the E220 module. The **Raspberry Pi 5** receives it and forwards data to AWS via [`receive-and-send-to-aws.py`](code/receive-and-send-to-aws.py).
 
-Factors kept rigorously identical to eliminate experimental bias:
+In this setup, the **Aquacheck unit no longer uses Wi-Fi at all** and does **not need Internet** to operate. Only the gateway Pi must be online (Wi-Fi or Ethernet) to reach AWS IoT Core.
 
-* **Cycle Interval:** 5 minutes (300 s) in *Deep Sleep*.
-* **Power Source:** Identical batteries with equal initial nominal voltage.
-* **Environment:** Thermal chamber at a constant temperature.
-* **Sensors:** Identical measurement hardware providing the raw data values.
-* **RF Environment:** Fixed, short distances (3m) to prevent automatic retransmissions caused by fading.
+One deliberate change on the cloud side: the **`timestamp` is no longer set on the Aquacheck** at transmission time, but **on the Raspberry Pi** when the LoRa frame is received and published. In practice this shifts the recorded time by only a few seconds (LoRa air time plus gateway processing), which is negligible for soil monitoring and battery-life comparison.
 
----
+The purpose of this branch is to **compare the stock Wi-Fi firmware with the LoRa variant** on the **same hardware and battery**, keeping the sleep cycle unchanged, in order to see **which configuration lasts longer** before the battery is depleted.
 
-## 4. Execution and Collection Protocol
+## Experimentation: Wi-Fi Aquacheck Mk3 Battery longevity test
 
-1. Simultaneous deployment of both systems.
-2. Recharge and swapping of batteries for a second test run to eliminate any hardware bias tied to specific battery cell discrepancies.
+Battery setting:
 
-The experimental process allows the collection of 4 distinct $T_{Fail}$ values:
+![Battery-Detail](images/battery-details.webp)
 
-* LoRa (Battery A & Battery B)
-* Wi-Fi (Battery A & Battery B)
+### Test 1 — Wi-Fi
 
-This enables a direct comparison using the exact same batteries:
+In this first test, I charge a battery and plug it into *Aquacheck 4* with the stock Wi-Fi firmware to measure battery longevity.
 
-* LoRa vs. Wi-Fi (Battery A)
-* LoRa vs. Wi-Fi (Battery B)
+- Start time: **21/05/2026 4:00 PM UTC+2**
+- Stop time: **28/05/2026 9:35 AM UTC+2**
+- Total duration: **6 days, 19 hours and 35 minutes**
+- Battery used: **A**
+- Aquacheck number: **4**
+- Aquacheck ID: **20250522102500**
 
----
+!!! info
 
-## 5. Results and Measurements
+    The soil sensor was not on the soil so only humidity and temperature were sensed
 
-**Expected Result:** A significantly higher $T_{Fail}$ for the LoRa system compared to the Wi-Fi system.
+!!! warning
 
-### Raw Experimental Data
+    Data in this test looks weird and irelevant, something probably went wrong. It shoud be ignored.
 
-| System Configuration | Battery Used | Operating Time ($T_{Fail}$) |
-| :------------------- | :----------- | :-------------------------- |
-| **System B (LoRa)**  | Battery A    | ...                         |
-| **System A (Wi-Fi)** | Battery A    | ...                         |
-| **System B (LoRa)**  | Battery B    | ...                         |
-| **System A (Wi-Fi)** | Battery B    | ...                         |
+![Battery-Detail](images/test1-battery-graph.webp)
+
+### Test 2 — Wi-Fi
+
+In this second test, I use the same battery, the same voltage and the same Aquacheck. I just put the soil sensor into water to see if that change something.
+
+- Start time: **01/06/2026 09:00 AM UTC+2**
+- Stop time: **04/06/2026 10:25 PM UTC+2**
+- Total duration: **3 days, 13 hours and 25 minutes**
+- Battery used: **A**
+- Aquacheck number: **4**
+- Aquacheck ID: **20250522102500**
+
+![Battery-Detail](images/test2-battery-graph.webp)
+
+### Test 3 — Wi-Fi
+
+- Type: Wi-Fi
+- Start time: **08/06/2026 01:51 PM UTC+2**
+- Stop time: **11/06/2026 9:08 PM UTC+2**
+- Total duration: **3 days, 7 hours and 17 minutes.**
+- Battery used: **A**
+- Aquacheck number: **4**
+- Aquacheck ID: **20250522102500**
+
+![Battery-Detail](images/test3-battery-graph.webp)
+
+## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
+
+!!! important
+
+    LoRa module need 5V to operate. However ESP32 can only deliver 5V when it's connected to USB C. So to perform a battery test I used a step-up 5V between the 3.7v LiPo battery and the ESP32. The document says explicilty NOT TO DO THAT but actually it's works so I will perform a test like that but it's not recommanded and not scientific to compared 3.7v Wi-Fi and 5v LoRa.
+
+### Test 1 — LoRa
+
+- Type: LoRa
+- Start time: **11/06/2026 16:55 PM UTC+2**
+- Stop time: **17/06/2026 18:52 PM UTC+2**
+- Total duration: **6 days, 1 hour, and 57 minutes**
+- Battery used: **C**
+- Aquacheck number: **6**
+- Aquacheck ID: **20250520153000**
+
+### Test 2 — LoRa
+
+- Type: LoRa
+- Start time: **18/06/2026 14:21 PM UTC+2**
+- Stop time: **UTC+2**
+- Total duration:
+- Battery used: **C**
+- Aquacheck number: **6**
+- Aquacheck ID: **20250520153000**

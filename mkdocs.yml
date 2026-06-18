@@ -19,8 +19,8 @@ nav:
     - LoRa: subjects/lora.md
   - Experimentation:
     - LoRa - Raspi-Raspi: experimentation/lora-raspi-raspi/lora-raspi-raspi.md
-    - LoRa - Raspi-ESP32 (draft): experimentation/lora-raspi-esp32/lora-raspi-esp32_draft.md
     - LoRa - Raspi-ESP32: experimentation/lora-raspi-esp32/lora-raspi-esp32.md
+    - LoRa - Plan Raspi-ESP32: experimentation/lora-raspi-esp32/lora-raspi-esp32-plan.md
   - Simulation: simulation.md
   - Publication: publication.md
   - Glossary: glossary.md
