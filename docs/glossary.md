@@ -190,6 +190,12 @@ The Spreading Factor is a parameter that defined the ratio between the transmiss
 
 ## PDR
 
+Packet Delivery Ration also called PSR (Packet Success Ration). Network metric to measure how much packet are successfully delivered to the destination compared to the total number of packet sent.
+
+$$
+PDR = \frac{Number\ Of\ Packet\ Successufly\ Received}{Number\ Of\ Packet\ Sent} * 100
+$$
+
 ## FLB
 
 ## Stochastic
