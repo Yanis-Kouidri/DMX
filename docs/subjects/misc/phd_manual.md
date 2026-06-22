@@ -76,6 +76,8 @@ A unique identifier for a digital document. It precisely identifies a research p
 * **Structure:** `editor_identifier/number_assigned_by_the_editor`
 * **Example:** `10.1038/s41586-021-03430-5`
 
+You can resolve any DOI by appending it to the [doi.org](https://doi.org) domain — for example, `https://doi.org/10.1038/s41586-021-03430-5` redirects to the official publication page.
+
 ### ORCID
 
 ORCID stands for *Open Researcher and Contributor ID*. It is a unique 16-digit identifier assigned to a researcher. You can create one at [orcid.org](https://orcid.org).
