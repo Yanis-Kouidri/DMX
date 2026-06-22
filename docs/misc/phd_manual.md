@@ -94,13 +94,13 @@ A free and open-source bibliographic software used to reference all read and uti
 * You can create an account to synchronize your library with [Zotero servers](https://www.zotero.org).
 * It integrates seamlessly with [LaTeX](https://www.latex-project.org).
 
-### LaTeX
+### [LaTeX](https://www.latex-project.org)
 
 A document preparation language and typesetting system. It is the equivalent of Word but specialized for research. The document structure is defined using instructions, making it easy to maintain a common layout for research papers.
 
 ### [Overleaf](https://www.overleaf.com)
 
-The equivalent of Google Docs for LaTeX. It provides a web interface to write documents in [LaTeX](https://www.latex-project.org) collaboratively.
+The equivalent of Google Docs for [LaTeX](https://www.latex-project.org). It provides a web interface to write documents in [LaTeX](https://www.latex-project.org) collaboratively.
 
 ### [Google Scholar](https://scholar.google.com)
 
@@ -127,3 +127,10 @@ A global reference tool used to rank computer science conferences by prestige le
 ### [dblp](https://dblp.org)
 
 Stands for *Digital Bibliography and Library Project*. It is a bibliographic database dedicated to computer science. In practice, it acts like an [arXiv](https://arxiv.org) or [Google Scholar](https://scholar.google.com) specifically for computer science, but strictly lists high-quality papers published in reputable scientific journals.
+
+### [Sci-Hub](https://sci-hub.ru)
+
+A shadow library that provides free access to millions of research papers and academic articles publish before 2022, bypassing publisher paywalls. It automatically resolves DOIs to their full-text PDFs when a paper is behind a paywall.
+
+!!! warning "Legal Considerations"
+    Sci-Hub operates in a legal gray area and has faced multiple lawsuits for copyright infringement. The website may be inaccessible depending on many factors.
