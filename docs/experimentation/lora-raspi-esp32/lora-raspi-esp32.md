@@ -138,8 +138,8 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
 - Type: LoRa
 - Start time: **18/06/2026 14:21 PM UTC+2**
-- Stop time: **UTC+2**
-- Total duration:
+- Stop time: **22/06/2026 01:59 AM UTC+2**
+- Total duration: **3 days, 11 hours, and 38 minutes.**
 - Battery used: **C**
 - Aquacheck number: **6**
 - Aquacheck ID: **20250520153000**
