@@ -143,3 +143,11 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Battery used: **C**
 - Aquacheck number: **6**
 - Aquacheck ID: **20250520153000**
+
+## Conclusion
+
+### Graph
+
+![Battery-Detail](images/graph_wifi_lora.png)
+
+As you can see here, battery lifetime using LoRa is not stable, one time it last 6 days, the other time it last only 3 days. My conclusion is the 5V setup doesn't allow making a clear comparison between Wi-Fi and LoRa as the setup is different. However, this experience shows that using LoRa with ESP 32 is possible and work in production.
