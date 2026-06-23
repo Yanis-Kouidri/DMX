@@ -58,6 +58,10 @@ There are several types of research papers:
 
 Very similar to a scientific article, this is a research paper submitted to a conference. The difference lies in the fact that there is limited time to accept the paper, so it is generally either accepted or rejected outright. If accepted, the PhD student may present the article on stage or via a poster.
 
+### Proceeding
+
+A proceeding is a published collection of the research papers presented at a conference. It serves as the official record of the conference's scientific contributions and is often published by a reputable publisher (such as Springer, IEEE, or ACM) under a specific series.
+
 ### Preprint
 
 A research paper just before its submission to a journal or conference, meaning before peer review and eventual corrections.
