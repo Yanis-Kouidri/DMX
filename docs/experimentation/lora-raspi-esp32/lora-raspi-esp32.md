@@ -72,6 +72,10 @@ Battery setting:
 
 ![Battery-Detail](images/battery-details.webp)
 
+!!! important
+
+    I notice that charging LiPo battery with this charger producde pretty random charging level in output. what the charger call full is not always the say. To counteract that I measure the tension of the battery before I run a test.
+
 ### Test 1 — Wi-Fi
 
 In this first test, I charge a battery and plug it into *Aquacheck 4* with the stock Wi-Fi firmware to measure battery longevity.
