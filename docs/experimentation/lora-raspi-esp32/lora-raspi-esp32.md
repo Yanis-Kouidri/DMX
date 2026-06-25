@@ -118,6 +118,17 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
 ![Battery-Detail](images/test3-battery-graph.webp)
 
+### Test 4 — Wi-Fi
+
+- Type: Wi-Fi
+- Start time: **25/06/2026 04:51 PM UTC+2**
+- Stop time:
+- Total duration:
+- Battery used: **A**
+- Battery tension just before it start: **4.01V**
+- Aquacheck number: **4**
+- Aquacheck ID: **20250522102500**
+
 ## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
 
 !!! important
