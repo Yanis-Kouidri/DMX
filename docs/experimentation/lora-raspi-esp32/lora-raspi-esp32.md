@@ -144,6 +144,16 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Aquacheck number: **6**
 - Aquacheck ID: **20250520153000**
 
+### Test 3 — LoRa
+
+- Type: LoRa
+- Start time: **25/06/2026 09:55 AM UTC+2**
+- Stop time:
+- Total duration:
+- Battery used: **C**
+- Aquacheck number: **6**
+- Aquacheck ID: **20250520153000**
+
 ## Conclusion
 
 ### Graph
