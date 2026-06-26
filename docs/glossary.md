@@ -58,9 +58,13 @@ Dilution Of Precision, In context of GNSS and wireless positioning, DOP is a mat
 
 Wireless M-Bus is an open standard (EN 13757-4) optimized for automatic reading of meter such heating meter or water consumption meter. It operates over free bands such as 868 MHz, and it's design to last for a long time (up to 10 years). It works with a star topology where it sends periodically his data to the gateway. Furthermore, it's always the meter who sends the data to the gateway, never the opposite. The WM-Bus range is around 40 meters indoors ans 800m outdoor in free field.
 
-## Duty-cycling
+## Duty-cycling (sleep/wake up)
 
 In case of a sensor, it's a technic to alternate between wake and sleep cycle in order to save battery instead of being always wake. However, during sleep cycle sensor cannot sense neither communicate through radio.
+
+## Regulatory Duty-cycle
+
+It can also refer to legal regulations that restrict a device's transmission time on free frequency bands (e.g., limiting transmission to no more than 1% of the time) to prevent network congestion.
 
 ## WuR
 
