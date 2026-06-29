@@ -269,3 +269,7 @@ A neural network is a digital imitation of the human brain. It is composed of se
 ## Adaptative Date Rate (ADR)
 
 Adaptive Data Rate (ADR) is a radiocommunication concept where the data rate is dynamically adapted depending on radio link metrics. Basically, if the radio link is bad, the ADR mechanism will reduce the data rate in order to successfully reach the destination. Conversely, if the radio link is good, it will raise the data rate.
+
+## End device, end node
+
+In an LPWAN context, an end device (or end node) refers to IoT device and are connected to one or several gateways.
