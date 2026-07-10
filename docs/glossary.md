@@ -273,3 +273,7 @@ Adaptive Data Rate (ADR) is a radiocommunication concept where the data rate is 
 ## End device, end node
 
 In an LPWAN context, an end device (or end node) refers to IoT device and are connected to one or several gateways.
+
+## SCHS
+
+SCHC stands for Static Context Header Compression and Fragmentation ([RFC 8724](https://datatracker.ietf.org/doc/html/rfc8724)). It enables resource-constrained IoT devices to connect to the Internet over Low-Power Wide-Area Networks (LPWAN). It works by compressing large network headers (like IPv6/UDP) over the constrained radio segment between the sensor and a gateway. Both the sensor and the gateway share a pre-configured Static Context (a set of rules). Instead of transmitting the full header, the sensor only sends a short Rule ID, allowing the gateway to fully reconstruct the original Internet packet.
