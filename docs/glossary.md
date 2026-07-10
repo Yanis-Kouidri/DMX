@@ -176,13 +176,19 @@ Signal to Noise Ration, metric to evaluate the quality of a radio link. Higher i
 
 ## Spreading Factor (SF)
 
-The Spreading Factor is a parameter that defined the ratio between the transmission (throughput) and range. In LoRa, the Spreading Factor is between 7 and 12. At SF7 the throughput is high (~5 kbps) but the range is low (~2 km). At SF12 the throughput is low (~250 bps) but the range is high (+15 km).
+The Spreading Factor is a parameter that defined the ratio between the transmission (throughput) and range. In LoRa, the Spreading Factor is between 7 and 12. At SF7 the throughput is high (~5 kbps) but the range is low (~2 km). At SF12 the throughput is low (~250 bps) but the range is high (+15 km). A high SF (SF12) lead to higher time on air and higher consumption. That's also consume more of the device duty cycle.
 
 ## mMTC
 
+mMTC stands for massive Machine Type Communication. It's a type of network that allow huge number of IoT device in the same area such as 1 million by km². It's a core part of 5G and 6G, defined by 3GPP.
+
 ## ATSSS
 
+Access Traffic Steering Switching and Splitting, it's a functionality introduced by 3GPP (release 16) to allow User Equipment (UE) to be connected to internet through different access network such as 5G and Wi-Fi.
+
 ## MPTCP
+
+Multi-Path Transmission Control Protocol, an extension of standard TCP allowing to use simutiniouslty multiple network paths to reach the destination.
 
 ## ATSSS-LL
 
