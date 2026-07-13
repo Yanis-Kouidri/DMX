@@ -138,6 +138,23 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
     Here I charge several time the battery with the charger and it looks like it extend the total duration time to 9 days.
 
+### Test 5 — Wi-Fi
+
+- Type: Wi-Fi
+- Git commit : feature/battery-optimization : b03802d32
+- Start time: **13/07/2026 03:45 PM UTC+2**
+- Stop time:
+- Total duration:
+- Battery used: **A**
+- Battery tension just before it start: **4.08V**
+- Battery tension after it dies:
+- Aquacheck number: **4**
+- Aquacheck ID: **20250522102500**
+
+!!! info
+
+    This version use an improved code that shoud use less battery. Sensor are no longer on the 3.3V pin but on a GPIO 32 that shoud not power them during deepsleep.
+
 ## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
 
 !!! important
