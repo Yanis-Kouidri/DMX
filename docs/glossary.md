@@ -64,7 +64,7 @@ In case of a sensor, it's a technic to alternate between wake and sleep cycle in
 
 ## Regulatory Duty-cycle
 
-It can also refer to legal regulations that restrict a device's transmission time on free frequency bands (e.g., limiting transmission to no more than 1% of the time) to prevent network congestion.
+Duty-cycle can refer to legal regulations that restrict a device's transmission time on free frequency bands (e.g., limiting transmission to no more than 1% of the time) to prevent network congestion.
 
 ## WuR
 
