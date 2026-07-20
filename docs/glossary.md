@@ -286,7 +286,12 @@ SCHC stands for Static Context Header Compression and Fragmentation ([RFC 8724](
 
 ## CoAP
 
-## FUTOA
+CoAP stands for Constrained Application Protocol, it's a web protocol tailored for IoT. Whereas HTTP is heavyweight, CoAP is lightweight. For example, it uses UDP instead of TCP, short header, and DTLS for security.
+CoAP uses the same REST architecture as HTTP (it natively supports GET, POST, PUT, DELETE).
+
+## FUOTA
+
+FUOTA stand for Firmware Update Over-The-Air. It's a technique to update an IoT device without plugging any cable. It uses regular wireless access such as Wi-Fi LoRaWAN or Sigfox to send the new firmware.
 
 ## mioty
 
@@ -299,3 +304,9 @@ SCHC stands for Static Context Header Compression and Fragmentation ([RFC 8724](
 ## GDR RSD
 
 ## DECT
+
+## CSMA
+
+## EMQX
+
+[EMQX](https://github.com/emqx/emqx)
