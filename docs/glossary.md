@@ -235,7 +235,7 @@ Mote are end device on an IoT network.
 
 ## ALOHA
 
-ALOHA is a very simple Medium Access Control (MAC) protocol. It works with random access to support, when a station has to transmit it transmit without sensing the channel prior. Collision are frequent, so the reliability rely on ACK messages. In pure ALOHA the maximum throughput is about 18.4% of the channel bandwidth. Pure ALOHA is used in LoRaWAN.
+ALOHA is a very simple Medium Access Control (MAC) protocol. It works with random access to support, when a station has to transmit a message, it transmits without sensing the channel prior. Collision are frequent, so the reliability rely on ACK messages. In pure ALOHA the maximum throughput is about 18.4% of the channel bandwidth. Pure ALOHA is used in LoRaWAN.
 
 ## Machine Learning (ML)
 
