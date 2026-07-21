@@ -54,3 +54,5 @@ Cycléo
 Semtech
 FUOTA
 LR-FHSS
+mioty
+Sisvel

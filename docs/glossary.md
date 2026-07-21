@@ -295,6 +295,10 @@ FUOTA stand for Firmware Update Over-The-Air. It's a technique to update an IoT 
 
 ## mioty
 
+mioty is an LPWAN technology developed by the German institute Fraunhofer IIS and normalized by ETSI. The physical layer relies on TSMA (Telegram Splitting Multiple Access), a patented transmission method that splits messages into tiny sub-packets. It operates on **unlicensed ISM bands**, has **extreme resistance** to noise and interference, and was designed for **massive IoT deployment**.
+
+Unlike LoRa, which requires proprietary Semtech hardware, mioty’s physical layer is software-defined and can run on standard sub-GHz radio chips from multiple vendors. However, the core TSMA technology is protected by patents (licensed through a Sisvel patent pool), and commercial software stacks usually need to be purchased from stack vendors while LoRaWAN stack is completely open. That said, it is still possible to use basic mioty stacks for free in non-commercial or academic contexts.
+
 ## MeshTastic
 
 ## Meshcore
