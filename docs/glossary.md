@@ -301,13 +301,23 @@ Unlike LoRa, which requires proprietary Semtech hardware, mioty’s physical lay
 
 ## MeshTastic
 
+MeshTastic is an open source project to create a decentralized wireless communication network without any physical infrastructure. It uses LoRa over a mesh network. MeshTastic is a MANET (Mobile Ad hoc NETwork) because node are mobile, and it doesn't rely on a preexisting physical infrastructure.
+
 ## Meshcore
+
+Meshcore is an alternative the MeshTastic, it works on the same device and use LoRaWAN but include more hierarchy and structure to reduce the noise due to the flood. Clients don't repeat received message, only repeater can do that and a room server store the messages.
 
 ## LR-FHSS
 
+LR-FHSS stand for Long Range — Frequency Hopping Spread Spectrum. It's a radio protocol design to extend LoRaWAN networks capacities. It's an alternative to legacy CSS (Chirp Spread Spectrum) use by default in LoRaWAN. It's manly use to Direct-to-Satellite communication. LR-FHSS is highly resistant to Doppler effect, resist more to interference and have approximately the same range à CSS but has a lower throughput.
+
 ## GDR RSD
 
+GDR RSD stands for Groupement De Recherche Réseaux et Systèmes Distribués. It's an animation structure attached to the CNRS. Its goal is to animate and federate the French community research around network and distributed systems. It organizes for example the GDR RSD Days.
+
 ## DECT
+
+DECT stands for Digital Enhanced Cordless Telecommunications. It's the wireless technology uses for landline phone to communicate with their bases. DECT operate on dedicated frequency bands so it less subject to interferences. DECT is still used today, it evolved in CAT-iq and DECT NR+ for IoT.
 
 ## CSMA
 
