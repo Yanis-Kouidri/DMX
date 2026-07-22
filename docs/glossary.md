@@ -192,11 +192,19 @@ Multi-Path Transmission Control Protocol, an extension of standard TCP allowing 
 
 ## ATSSS-LL
 
+ATSSS-Low Level is a lightweight alternative to MPTCP for non TCP traffic such as UDP.
+
 ## Matter
+
+Applicative layer protocol working over IPv6. It's come from an open norm in order to connect IoT domotics objects from different brands. Create by the CSA.
 
 ## CSA
 
+CSA stands for Connectivity Standard Alliance. It's a non-profit company that gather 600 company working on IoT. Its goal is to create and maintain standard to facilitate communication between IoT devices.
+
 ## MNT
+
+MNT stands for Multi Technology Network, it means a network the rely on several underlying technology such as Wi-Fi, Ethernet, LoRaWAN etc.
 
 ## PDR
 
@@ -206,21 +214,67 @@ $$
 PDR = \frac{Number\ Of\ Packet\ Successufly\ Received}{Number\ Of\ Packet\ Sent} * 100
 $$
 
-## FLB
+## FBL
+
+FBL stands for Finite BlockLength. A paradigm contrasted with Infinite Blocklength (which assumes arbitrarily long messages where traditional error-correcting codes achieve near-perfect reliability). FBL applies heavily to IoT because messages are extremely short (often just a few bytes). In short packets, overhead is high, and a single burst of noise can degrade a huge portion of the payload, requiring specialized short-block channel coding.
 
 ## Stochastic
 
+Occurring as a result of chance; random. Example: Stochastic packet arrivals—packets do not arrive at fixed intervals, but rather according to a probability distribution, such as a Poisson distribution.
+
 ## TOPSIS
+
+TOPSIS stand for Technique for Order of Preference by Similarity to Ideal Solution. A mathematical multi-attribute decision-making method. Example: Selecting a route for a routing protocol.
 
 ## RODENT
 
+Routing Over Different Existing Network Topologies. A routing protocol designed to route across multiple topologies, making it well-suited for Multi-RAT (Multi-Radio Access Technology).
+
 ## Uruha
+
+A physical layer abstraction framework designed to simplify Multi-RAT usage in Machine-to-Machine (M2M) Air-to-Air, Air-to-Ground, and Ground-to-Ground contexts. This framework originates from a research paper and is not yet available online, though it may be possible to request it directly from the authors.
 
 ## ATSR
 
+Ambient Trust Sensor Routing. A routing protocol specifically designed for Wireless Sensor Networks (WSNs). Instead of simply finding the shortest path, it searches for the most reliable path by assigning a trust score to neighboring nodes based on factors like battery level, link quality, and packet delivery success rate.
+
 ## Hop-by-hop routing
 
+Hop-by-hop routing is a network routing technique where a data packet is forwarded through a series of intermediate routers (called "hops") toward its final destination.
+Instead of the sender pre-mapping the entire path, each router along the way independently inspects the packet and decides only the single next best step to forward it. Internet mainly uses hop-by-hop routing through IP.
+
 ## Source routing
+
+Source routing is the opposite approach as hop-by-hop routing: instead of relying on each router to decide the next hop, the sender (the source) pre-determines the entire path the packet must take across the network.
+
+The sender embeds an ordered list of router IP addresses or interfaces directly into the packet's header. As intermediate routers receive the packet, they simply follow the explicit turn-by-turn directions written on the packet itself rather than performing independent routing decisions.
+
+There are two main variations:
+
+- Strict Source Routing: The sender specifies the exact sequence of every single router along the path. If a packet cannot hit a listed node in exact order, it is dropped.
+- Loose Source Routing: The sender specifies key landmark nodes (waypoints) that the packet must visit, but intermediate routers can choose how to hop between those mandatory waypoints.
+
+## Segment Routing
+
+Segment Routing is a specific implementation of source routing where the source specifies the segments to use instead to specify the whole IP address stack of each router to cross.
+
+## SID
+
+A SID (Segment Identifier) is a fundamental instruction in Segment Routing that tells the network where to send a packet or what action to perform on it.
+
+Instead of just pointing to a destination address, a SID represents a specific node, a physical link, or a service (like a VPN or firewall). In SR-MPLS, SIDs are encoded as MPLS labels, while in SRv6, they are represented as 128-bit IPv6 addresses. By chaining multiple SIDs together at the source router, the network can steer traffic along precise, customized paths.
+
+## MPLS
+
+MPLS (Multiprotocol Label Switching) is a traditional networking technique designed to speed up and direct network traffic by using short path labels instead of long network addresses.
+
+Instead of having every intermediate router read the full IP destination and consult a complex routing table at each hop, the ingress router assigns a fixed label (a number) to the packet header. Intermediate routers simply swap this label and forward the packet at hardware speeds along a predetermined path (LSP), making it an ideal technology for building private WANs and VPNs across service provider networks.
+
+## SRv6
+
+SRv6 (Segment Routing over IPv6) is a modern network routing architecture that applies the principles of source routing natively over a pure IPv6 network.
+
+Instead of relying on the default shortest path or layering complex protocols (like MPLS), the ingress router inserts an ordered list of IPv6 addresses (called SIDs) directly into the packet header. These addresses act as instructions to guide the traffic through key waypoints (traffic engineering) and trigger specific network services (VPNs, security) seamlessly.
 
 ## Mote
 
