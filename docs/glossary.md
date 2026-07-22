@@ -317,10 +317,20 @@ GDR RSD stands for Groupement De Recherche Réseaux et Systèmes Distribués. It
 
 ## DECT
 
-DECT stands for Digital Enhanced Cordless Telecommunications. It's the wireless technology uses for landline phone to communicate with their bases. DECT operate on dedicated frequency bands so it less subject to interferences. DECT is still used today, it evolved in CAT-iq and DECT NR+ for IoT.
+DECT stands for Digital Enhanced Cordless Telecommunications. It is the primary wireless technology used by landline phones to communicate with their base stations. Because DECT operates on dedicated frequency bands, it is far less subject to signal interference than standard Wi-Fi or Bluetooth devices. DECT remains widely used today and has evolved into CAT-iq (for high-definition IP voice) and DECT NR+ (for non-cellular 5G IoT networks).
 
 ## CSMA
 
+CSMA (Carrier Sense Multiple Access) is a Media Access Control (MAC) protocol where nodes check (sense) the shared channel for activity before transmitting to reduce collisions. If the channel is busy, the node waits; if idle, it transmits. Common variants handle collision handling differently:
+
+- CSMA/CD (Collision Detection): Aborts transmission immediately when a collision is detected (legacy Ethernet).
+- CSMA/CA (Collision Avoidance): Uses random back off times and acknowledgments to avoid collisions altogether (Wi-Fi).
+- CSMA/CR (Collision Resolution / Bitwise Arbitration): Uses priority-based arbitration, so dominant bits overwrite recessive bits without destroying the message (CAN bus).
+
 ## EMQX
 
-[EMQX](https://github.com/emqx/emqx)
+[EMQX](https://github.com/emqx/emqx) is an open-source MQTT broker for IoT. It is highly scalable, clusters well, and can handle up to 100 million concurrent MQTT connections per cluster. Beyond MQTT and WebSockets, it also supports CoAP, LwM2M, and HTTP via protocol gateways.
+
+## Multi-armed bandit (MAB)
+
+In AI, the Multi-Armed Bandit is a classic reinforcement learning problem where an agent must maximize total reward when faced with multiple options (arms) of unknown reward probabilities. The agent must continuously balance exploration (trying under-tested arms to find better rewards) and exploitation (choosing the current highest-yielding arm).
