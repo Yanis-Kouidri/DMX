@@ -196,6 +196,18 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
     Here I charge several time the battery with the charger and it looks like it extend the total duration time to almost 9 days. However the duration time is almost the same between Wi-Fi and LoRa. It should have a problem somewhere, probably in the code. I will refactor it.
 
+### Test 4 — LoRa
+
+- Type: LoRa
+- Start time: **22/07/2026 04:56 PM UTC+2**
+- Stop time:
+- Total duration:
+- Battery used: **D**
+- Battery tension just before it start: **4.12V**
+- Battery tension after it dies:
+- Aquacheck number: **6**
+- Aquacheck ID: **20250520153000**
+
 ## Conclusion
 
 ### Graph
