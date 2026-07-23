@@ -388,3 +388,7 @@ CSMA (Carrier Sense Multiple Access) is a Media Access Control (MAC) protocol wh
 ## Multi-armed bandit (MAB)
 
 In AI, the Multi-Armed Bandit is a classic reinforcement learning problem where an agent must maximize total reward when faced with multiple options (arms) of unknown reward probabilities. The agent must continuously balance exploration (trying under-tested arms to find better rewards) and exploitation (choosing the current highest-yielding arm).
+
+## DER (Data Extraction Rate)
+
+DER is the equivalent of PDR (Packet Delivery Ration) at an applicative layer such as Network Server in LoRaWAN.
