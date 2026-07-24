@@ -146,9 +146,13 @@ Successive Convex Approximation, operations research algorithm that allow to tra
 
 Low Power Wide Area Network, network using long range and low power wireless communications such as LoRaWan, LTE-M, NB-IoT, Sigfox. See [Wikipedia](https://en.wikipedia.org/wiki/Low-power_wide-area_network)
 
-## RSSI
+## RSSI (Received Signal Strength Indicator)
 
-Received Signal Strength Indicator, power of received signal by an equipment, often measure in dBm.
+RSSI (Received Signal Strength Indicator) is a relative measurement of the total radio power received by an antenna, expressed in dBm.
+
+It measures all incoming energy on the channel, combining the desired signal, background noise, and interference. Because of this, **a strong RSSI does not guarantee a good connection**; if the signal is strong but drowned in heavy interference, performance will still be poor. 
+
+Values typically range from around $-30\text{ dBm}$ (very strong) to $-100\text{ dBm}$ (extremely weak).
 
 ## NB-IoT
 
@@ -400,3 +404,7 @@ SIR is the ratio between the signal strength a receiver wants to pick up and the
 ## SINR (Signal to Interference plus Noise Ratio)
 
 A mix between SNR and SIR.
+
+## ToA (Time on Air)
+
+ToA is the exact duration a radio transmitter actively occupies a channel to send a packet of data, from the first bit to the last.
