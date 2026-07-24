@@ -392,3 +392,11 @@ In AI, the Multi-Armed Bandit is a classic reinforcement learning problem where 
 ## DER (Data Extraction Rate)
 
 DER is the equivalent of PDR (Packet Delivery Ration) at an applicative layer such as Network Server in LoRaWAN.
+
+## SIR (Signal-Interference Ratio)
+
+SIR is the ratio between the signal strength a receiver wants to pick up and the strength of other unwanted signals. It differs from SNR (Signal-to-Noise Ratio), which measures the ratio of signal strength to background noise. Unlike interference, noise is a natural phenomenon that does not come from other transmitting stations.
+
+## SINR (Signal to Interference plus Noise Ratio)
+
+A mix between SNR and SIR.
