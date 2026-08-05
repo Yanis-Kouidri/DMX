@@ -86,6 +86,7 @@ In this first test, I charge a battery and plug it into *Aquacheck 4* with the s
 - Battery used: **A**
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
+- Aquacheck version : Mk3
 
 !!! info
 
@@ -107,6 +108,7 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Battery used: **A**
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
+- Aquacheck version : Mk3
 
 ![Battery-Detail](images/test2-battery-graph.webp)
 
@@ -119,6 +121,7 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Battery used: **A**
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
+- Aquacheck version : Mk3
 
 ![Battery-Detail](images/test3-battery-graph.webp)
 
@@ -133,6 +136,7 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Battery tension after it dies: **0V**
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
+- Aquacheck version : Mk3
 
 !!! info
 
@@ -141,7 +145,8 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 ### Test 5 — Wi-Fi
 
 - Type: Wi-Fi
-- Git commit : feature/battery-optimization : b03802d32
+- Git branch : feature/battery-optimization
+- Git commit : b03802d32
 - Start time: **13/07/2026 03:45 PM UTC+2**
 - Stop time:
 - Total duration:
@@ -150,10 +155,30 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Battery tension after it dies:
 - Aquacheck number: **4**
 - Aquacheck ID: **20250522102500**
+- Aquacheck version : Mk3
 
 !!! info
 
     This version use an improved code that shoud use less battery. Sensor are no longer on the 3.3V pin but on a GPIO 32 that shoud not power them during deepsleep.
+
+### Test 6 — Wi-Fi
+
+- Type: Wi-Fi
+- Git branch : Refactoring
+- Git commit : b646abb628c98
+- Start time: **05/08/2026 11:21 AM UTC+2**
+- Stop time:
+- Total duration:
+- Battery used: **B**
+- Battery tension just before it start: **3.93V**
+- Battery tension after it dies:
+- Aquacheck number: **12**
+- Aquacheck ID: **20260520162800**
+- Aquacheck version : Mk4 v1
+
+!!! info
+
+    This version use an Aquacheck Mk4 that is a PCB. The hardware is different and the software too. I measure it in order to know how much time battery last in this version.
 
 ## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
 
