@@ -420,3 +420,8 @@ OTAA is a dynamic and secure authentication method used in LPWANs such as LoRaWA
 ## ABP (Activation By Personalization)
 
 ABP is a LoRaWAN acronym contrasting with OTAA. While OTAA uses a Join-Request message to negotiate session keys dynamically, ABP relies on pre-configuring keys directly on the device so it can communicate immediately without prior negotiation. It is less secure because session keys never rotate, and less flexible because changing network servers requires physically re-provisioning the device.
+
+## VSAT (Very Small Aperture Terminal)
+
+VSAT stands for Very Small Aperture Terminal. It's a small satellite dish (typically 0.6 to 2.4 meters in diameter) that establishes bidirectional satellite communication. It's particularly useful in remote areas where terrestrial networks (e.g., fiber, 4G/5G) are not available. A VSAT terminal communicates with a satellite in geostationary orbit (GEO), which relays the signal to a hub (or gateway) that makes the link with the Internet. VSAT is used in applications such as rural connectivity, maritime and aeronautical communications, and enterprise networks.
+
