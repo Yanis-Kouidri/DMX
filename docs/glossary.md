@@ -412,3 +412,11 @@ ToA is the exact duration a radio transmitter actively occupies a channel to sen
 ## UART (Universal Asynchronous Receiver-Transmitter)
 
 UART is a hardware serial communication protocol used for data transmission. It is widely used in IoT with boards such as Arduino, ESP32, and Raspberry Pi. It doesn't require a clock signal, but it requires a common ground (GND) and the same baud rate configured on both sides.
+
+## OTAA (Over-The-Air Activation)
+
+OTAA is a dynamic and secure authentication method used in LPWANs such as LoRaWAN to onboard a device to the network. It relies on a Pre-Shared Key (PSK) known by both the server and the device to generate session keys that secure communication.
+
+## ABP (Activation By Personalization)
+
+ABP is a LoRaWAN acronym contrasting with OTAA. While OTAA uses a Join-Request message to negotiate session keys dynamically, ABP relies on pre-configuring keys directly on the device so it can communicate immediately without prior negotiation. It is less secure because session keys never rotate, and less flexible because changing network servers requires physically re-provisioning the device.
