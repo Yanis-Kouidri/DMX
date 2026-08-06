@@ -150,7 +150,7 @@ Low Power Wide Area Network, network using long range and low power wireless com
 
 RSSI (Received Signal Strength Indicator) is a relative measurement of the total radio power received by an antenna, expressed in dBm.
 
-It measures all incoming energy on the channel, combining the desired signal, background noise, and interference. Because of this, **a strong RSSI does not guarantee a good connection**; if the signal is strong but drowned in heavy interference, performance will still be poor. 
+It measures all incoming energy on the channel, combining the desired signal, background noise, and interference. Because of this, **a strong RSSI does not guarantee a good connection**; if the signal is strong but drowned in heavy interference, performance will still be poor.
 
 Values typically range from around $-30\text{ dBm}$ (very strong) to $-100\text{ dBm}$ (extremely weak).
 
