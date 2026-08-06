@@ -408,3 +408,7 @@ A mix between SNR and SIR.
 ## ToA (Time on Air)
 
 ToA is the exact duration a radio transmitter actively occupies a channel to send a packet of data, from the first bit to the last.
+
+## UART (Universal Asynchronous Receiver-Transmitter)
+
+UART is a hardware serial communication protocol used for data transmission. It is widely used in IoT with boards such as Arduino, ESP32, and Raspberry Pi. It doesn't require a clock signal, but it requires a common ground (GND) and the same baud rate configured on both sides.
