@@ -424,4 +424,3 @@ ABP is a LoRaWAN acronym contrasting with OTAA. While OTAA uses a Join-Request m
 ## VSAT (Very Small Aperture Terminal)
 
 VSAT stands for Very Small Aperture Terminal. It's a small satellite dish (typically 0.6 to 2.4 meters in diameter) that establishes bidirectional satellite communication. It's particularly useful in remote areas where terrestrial networks (e.g., fiber, 4G/5G) are not available. A VSAT terminal communicates with a satellite in geostationary orbit (GEO), which relays the signal to a hub (or gateway) that makes the link with the Internet. VSAT is used in applications such as rural connectivity, maritime and aeronautical communications, and enterprise networks.
-
