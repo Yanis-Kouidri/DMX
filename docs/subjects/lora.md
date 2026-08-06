@@ -42,3 +42,30 @@ In addition to the standard RX1 and RX2 windows, the gateway regularly broadcast
 The reception window is kept open almost continuously, closing only while the device is actively transmitting. This mode requires a constant power supply (typically mains power), but it offers near-zero latency for receiving commands or downlink data immediately.
 
 ### Spreading Factor (SF)
+
+In LoRaWAN, the Spreading Factor (SF) represents a trade-off between communication range, energy consumption, and airtime. In standard LoRaWAN deployments, the Spreading Factor ranges from SF7 to SF12.
+
+- SF7 offers the highest bitrate, resulting in the shortest time-on-air and the lowest energy consumption. However, its range is limited (typically around 2 km in urban environments).
+- SF12 provides the maximum range and obstacle penetration, but yields the lowest bitrate and the longest time-on-air, consuming significantly more energy to transmit the same message.
+
+Additionally, different Spreading Factors are orthogonal to one another. This means two devices transmitting simultaneously on the same frequency channel using different SFs will not interfere with each other.
+
+!!! warning
+
+    Spreading Factors are quasi-orthogonal rather than fully orthogonal. A high-power SF7 transmission from a nearby device can interfere with and mask (jam) a weak SF12 signal received from a distant device at the same time.
+
+### Transmission Power (TX Power)
+
+The Transmission Power defines the amount of energy, expressed in dBm, supplied to the antenna by the transmitter to send a message. In Europe, the signal power typically ranges between 2 dBm and 14 dBm (up to 25 mW). A higher transmission power provides better range and obstacle penetration, however, it requires significantly more energy, which can quickly drain battery-powered devices.
+
+### Adaptative Data Rate (ADR)
+
+### Coding Rate
+
+### Uplink
+
+In LoRaWAN, uplink refers to messages sent from the sensors (end-devices) to the network. This represents the vast majority of all network traffic.
+
+### Downlink
+
+In LoRaWAN, downlink refers to messages sent from the network to the sensors. It is used for control commands, acknowledgments (ACKs), network reconfigurations (such as ADR), and Firmware Updates Over-The-Air (FUOTA). Downlink traffic is kept to a minimum to conserve network capacity and device battery life.
