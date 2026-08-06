@@ -69,3 +69,45 @@ In LoRaWAN, uplink refers to messages sent from the sensors (end-devices) to the
 ### Downlink
 
 In LoRaWAN, downlink refers to messages sent from the network to the sensors. It is used for control commands, acknowledgments (ACKs), network reconfigurations (such as ADR), and Firmware Updates Over-The-Air (FUOTA). Downlink traffic is kept to a minimum to conserve network capacity and device battery life.
+
+### Security keys
+
+#### AppKey
+
+The Application Key is a root key unique to each end-device. In LoRaWAN 1.0.x, it is used during the Over-The-Air Activation (OTAA) join procedure to derive the session keys (AppSKey and NwkSKey) and to encrypt/decrypt the join-accept message.
+
+#### NtwKey
+
+The Network Key is a root key unique to each end-device. In LoRaWAN 1.1, it is used during the Over-The-Air Activation (OTAA) join procedure to derive the network session keys (FNwkSIntKey, SNwkSIntKey and NwkSEncKey).
+
+#### LoRaWAN 1.0.x
+
+In LoRaWAN 1.0.x, two session keys are derived from the AppKey during the join procedure: the AppSKey and the NwkSKey.
+
+##### AppSKey
+
+The Application Session Key is used to encrypt and decrypt the application payload (the actual data) exchanged between the end-device and the network server. It is derived from the AppKey during the OTAA join procedure.
+
+##### NtwSKey
+
+The Network Session Key is used to compute and verify the Message Integrity Code (MIC) of the frames exchanged between the end-device and the network server. It is derived from the AppKey during the OTAA join procedure.
+
+#### LoRaWAN 1.1
+
+In LoRaWAN 1.1, security is improved by splitting the network keys into three distinct session keys derived from the NwkKey: FNwkSIntKey, SNwkSIntKey and NwkSEncKey. The AppSKey is derived from the AppKey.
+
+##### FNwkSIntKey (Forward Network Session Integrity Key)
+
+The Forward Network Session Integrity Key is used to compute and verify the Message Integrity Code (MIC) of uplink frames sent by the end-device to the network server. It is derived from the NwkKey during the OTAA join procedure.
+
+##### SNwkSIntKey (Serving Network Session Integrity Key)
+
+The Serving Network Session Integrity Key is used to compute and verify the Message Integrity Code (MIC) of downlink frames sent by the network server to the end-device. It is derived from the NwkKey during the OTAA join procedure.
+
+##### NwkSEncKey (Network Session Encryption Key)
+
+The Network Session Encryption Key is used to encrypt and decrypt the MAC commands (network management data) exchanged between the end-device and the network server. It is derived from the NwkKey during the OTAA join procedure.
+
+##### AppSKey (Application Session Key)
+
+The Application Session Key is used to encrypt and decrypt the application payload (the actual data) exchanged between the end-device and the application server. It is derived from the AppKey during the OTAA join procedure.
