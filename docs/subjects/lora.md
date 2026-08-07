@@ -111,3 +111,25 @@ The Network Session Encryption Key is used to encrypt and decrypt the MAC comman
 ##### AppSKey (Application Session Key)
 
 The Application Session Key is used to encrypt and decrypt the application payload (the actual data) exchanged between the end-device and the application server. It is derived from the AppKey during the OTAA join procedure.
+
+### Architecture and network components
+
+#### Gateway (GW)
+
+A radio hardware device acting as a transparent bridge. It receives radio messages transmitted by nearby End-Devices and forwards them to the Network Server via a standard IP connection (4G, Ethernet, Wi-Fi), and vice versa for downlink messages.
+
+#### Network Server (NS)
+
+The core of the LoRaWAN network. It removes duplicated frames received by multiple gateways, monitors link quality, manages Adaptive Data Rate (ADR), verifies message integrity, and routes data to the appropriate Application Server. To verify message integrity and decrypt MAC commands, Networks server owns NwkSKey.
+
+#### Application Server (AS)
+
+A server hosting the user's application and business logic. It receives the encrypted payload, decrypts it for data processing (dashboards, databases), and manages command transmissions back to devices. To decrypt the encrypted payload, the Application Server owns AppSKey.
+
+#### Join Server (JS)
+
+A security component responsible for authenticating devices during the Over-The-Air Activation (OTAA) process. It verifies device identity and generates the session keys required for encrypted communications. It owns root keys namely AppKey and NwkKey
+
+#### Location Server / Geolocation Server
+
+A specialized server that calculates a sensor's geographic position by analyzing radio metadata (such as Time Difference of Arrival or RSSI signal strength) collected across multiple gateways, enabling positioning without power-hungry GPS hardware.
