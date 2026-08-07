@@ -60,6 +60,8 @@ The Transmission Power defines the amount of energy, expressed in dBm, supplied 
 
 ### Adaptative Data Rate (ADR)
 
+An algorithm managed by the Network Server to dynamically optimize the data rate, Spreading Factor (SF), and transmission power of static LoRaWAN devices. The objective of ADR is to minimize device power consumption and optimize channel utilization across the network.
+
 ### Coding Rate (CR)
 
 Coding rate is the ratio of Forward Error Correction (FEC) bits added to the payload. For example, a CR of 4/5 means that for every 4 payload bits, 1 error correction bit is added (making 5 total bits transmitted). A higher CR, such as 4/8, provides greater resilience against burst interference, though it increases the message duration (Time-on-Air).
@@ -139,3 +141,15 @@ A security component responsible for authenticating devices during the Over-The-
 #### Location Server / Geolocation Server
 
 A specialized server that calculates a sensor's geographic position by analyzing radio metadata (such as Time Difference of Arrival or RSSI signal strength) collected across multiple gateways, enabling positioning without power-hungry GPS hardware.
+
+### Frame fields
+
+#### MType
+
+#### FCnt
+
+#### FPort
+
+#### Payload
+
+#### MIC
