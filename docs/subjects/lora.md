@@ -60,7 +60,13 @@ The Transmission Power defines the amount of energy, expressed in dBm, supplied 
 
 ### Adaptative Data Rate (ADR)
 
-### Coding Rate
+### Coding Rate (CR)
+
+Coding rate is the ratio of Forward Error Correction (FEC) bits added to the payload. For example, a CR of 4/5 means that for every 4 payload bits, 1 error correction bit is added (making 5 total bits transmitted). A higher CR, such as 4/8, provides greater resilience against burst interference, though it increases the message duration (Time-on-Air).
+
+### Bandwidth
+
+Bantwidth is the range of frequencies over which the radio signal is transmitted (e.g., 125 kHz, 250 kHz, or 500 kHz). A higher bandwidth allows for higher throughput (data rate) but reduces receiver sensitivity. In LoRaWAN, bandwidth is strictly defined by regional parameters, so it cannot be freely selected.
 
 ### Uplink
 
