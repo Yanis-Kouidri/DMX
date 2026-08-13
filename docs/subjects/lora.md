@@ -148,26 +148,6 @@ A LoRaWAN frame is structured in different layer
 
 ![LoRaWAN-Frame-Structure](images/lorawan_frame_structure.webp)
 
-#### MType (Message Type)
-
-MType stands for Message Type. It is a 3-bit field in the MAC header of a LoRaWAN packet. It indicates the type of LoRaWAN message being transmitted, such as a Join Request, Join Accept, Unconfirmed Data Up, or Confirmed Data Up.
-
-#### FCnt (Frame Counter)
-
-FCnt (Frame Counter) is a field in the FHDR used to count uplink and downlink frames. It helps prevent replay attacks and maintain synchronization between the device and the network.
-
-#### FPort (Frame Port)
-
-FPort is a field used to specify which application the FRMPayload is addressed to.
-
-#### FHDR (Frame Header)
-
-It is the part of the MAC frame that contains the information required to identify the device and manage the frame. It contains the **DevAddr, FCtrl, FCnt, and FOpts** fields.
-
-#### FRMPayload (Frame payload)
-
-#### MACPayload (MAC Payload)
-
 #### Payload
 
 Payload is the part of a message that contains the actual data being transported, excluding protocol headers and control information. In LoRaWAN, the term “payload” can be ambiguous, as its meaning depends on the protocol layer, such as the physical payload (PHYPayload), MACPayload, or FRMPayload.
@@ -176,32 +156,54 @@ Payload is the part of a message that contains the actual data being transported
 
 MHDR (MAC Header) is the first field of a LoRaWAN frame. It contains 1 byte of information about the message type and the LoRaWAN frame format version. More specifically it contains MType, RFU and Major
 
-#### Major
+##### MType (Message Type)
+
+MType stands for Message Type. It is a 3-bit field in the MAC header of a LoRaWAN packet. It indicates the type of LoRaWAN message being transmitted, such as a Join Request, Join Accept, Unconfirmed Data Up, or Confirmed Data Up.
+
+##### RFU (Reserved for Future Use)
+
+##### Major
 
 Major LoRaWAN version number
 
-#### FOpts (Frame Options)
+#### MACPayload (MAC Payload)
 
-FOpts is an optional field of the FHDR used to carry MAC commands. Its length is specified by the FOptsLen field in FCtrl and can be up to 15 bytes.
+#### FHDR (Frame Header)
 
-#### FCtrl (Frame Control)
+It is the part of the MAC frame that contains the information required to identify the device and manage the frame. It contains the **DevAddr, FCtrl, FCnt, and FOpts** fields.
+
+##### DevAddr (Device Address)
+
+DevAddr is a 32-bit network address used to identify a device within a LoRaWAN network. It consists of a NwkID and a NwkAddr. Unlike DevEUI, DevAddr is not a permanent device identifier.
+
+##### FCtrl (Frame Control)
 
 FCtrl is a field of the FHDR that contains control information used to manage the LoRaWAN frame, such as ADR, acknowledgments, and the length of FOpts.
 
-#### DevAddr (Device Address)
+##### FCnt (Frame Counter)
 
-DevAddr is a 32-bit network address used to identify a device within a LoRaWAN network. It consists of a NwkID and a NwkAddr. Unlike DevEUI, DevAddr is not a permanent device identifier.
+FCnt (Frame Counter) is a field in the FHDR used to count uplink and downlink frames. It helps prevent replay attacks and maintain synchronization between the device and the network.
+
+##### FOpts (Frame Options)
+
+FOpts is an optional field of the FHDR used to carry MAC commands. Its length is specified by the FOptsLen field in FCtrl and can be up to 15 bytes.
+
+#### FPort (Frame Port)
+
+FPort is a field used to specify which application the FRMPayload is addressed to.
+
+#### FRMPayload (Frame payload)
 
 #### MIC (Message Integrity Code)
 
 The Message Integrity Code (MIC) is a cryptographic value used to verify the integrity and authenticity of a LoRaWAN message. It is computed using AES-CMAC as specified in RFC 4493. The key(s) used to compute the MIC depends on the LoRaWAN version and the message type (MType).
 
-#### RFU (Reserved for Future Use)
+#### Join identifiers
 
-#### Device EUI (DevEUI)
+##### Device EUI (DevEUI)
 
 The Device Extended Unique Identifier (DevEUI) is a 64-bit (8-byte) globally unique identifier used to uniquely identify a LoRaWAN device. It is primarily used during the OTAA (Over-The-Air Activation) procedure.
 
-#### Join EUI (JoinEUI)
+##### Join EUI (JoinEUI)
 
 The Join Extended Unique Identifier (JoinEUI) is a 64-bit (8-byte) identifier that identifies the Join Server or entity with which a LoRaWAN device is associated for the join procedure. It is included in the Join-request message during OTAA.
