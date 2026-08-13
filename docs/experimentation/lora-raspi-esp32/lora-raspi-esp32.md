@@ -167,11 +167,11 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Git branch : Refactoring
 - Git commit : b646abb628c98
 - Start time: **05/08/2026 11:21 AM UTC+2**
-- Stop time:
-- Total duration:
+- Stop time: **11/08/2026 09:02 AM UTC+2**
+- Total duration: **4 days, 21 hours, and 41 minutes**
 - Battery used: **B**
 - Battery tension just before it start: **3.93V**
-- Battery tension after it dies:
+- Battery tension after it dies: **0V**
 - Aquacheck number: **12**
 - Aquacheck ID: **20260520162800**
 - Aquacheck version : Mk4 v1
