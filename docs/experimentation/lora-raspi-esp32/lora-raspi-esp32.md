@@ -180,6 +180,21 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
     This version use an Aquacheck Mk4 that is a PCB. The hardware is different and the software too. I measure it in order to know how much time battery last in this version.
 
+### Test 7 — Wi-Fi
+
+- Type: Wi-Fi
+- Git branch : Refactoring
+- Git commit : b646abb628c98
+- Start time: **17/08/2026 04:47 PM UTC+2**
+- Stop time:
+- Total duration:
+- Battery used: **B**
+- Battery tension just before it start: **3.98V**
+- Battery tension after it dies:
+- Aquacheck number: **12**
+- Aquacheck ID: **20260520162800**
+- Aquacheck version : Mk4 v1
+
 ## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
 
 !!! important
