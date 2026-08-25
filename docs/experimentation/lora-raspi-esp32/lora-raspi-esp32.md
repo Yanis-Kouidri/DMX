@@ -186,11 +186,11 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Git branch : Refactoring
 - Git commit : b646abb628c98
 - Start time: **17/08/2026 04:47 PM UTC+2**
-- Stop time:
-- Total duration:
+- Stop time: **24/08/2026 01:56 PM UTC+2**
+- Total duration: **6 days, 21 hours, 9 minutes**
 - Battery used: **B**
 - Battery tension just before it start: **3.98V**
-- Battery tension after it dies:
+- Battery tension after it dies: **0V**
 - Aquacheck number: **12**
 - Aquacheck ID: **20260520162800**
 - Aquacheck version : Mk4 v1
@@ -240,13 +240,17 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 
 - Type: LoRa
 - Start time: **22/07/2026 04:56 PM UTC+2**
-- Stop time:
-- Total duration:
+- Stop time: **24/08/2026 04:53 PM UTC+2**
+- Total duration: **32 days, 23 hours, 57 minutes**
 - Battery used: **D**
 - Battery tension just before it start: **4.12V**
-- Battery tension after it dies:
+- Battery tension after it dies: **3.87V**
 - Aquacheck number: **6**
 - Aquacheck ID: **20250520153000**
+
+!!! info
+
+    It lasts 32 days but dies prematurly mostly probably because of step up that vonvert 3.3V into 5V requiered by LoRa component.
 
 ## Conclusion
 
