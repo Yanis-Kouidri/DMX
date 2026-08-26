@@ -1,0 +1,15 @@
+# Move this file into /etc/systemd/system/lora-receiver.service
+[Unit]
+Description=The LoRa Receiver
+
+[Service]
+ExecStart=/home/pi/.local/bin/uv run receive.py
+WorkingDirectory=/home/pi/DMX/docs/experimentation/code
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
