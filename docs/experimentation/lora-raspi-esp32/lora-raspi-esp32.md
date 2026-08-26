@@ -195,6 +195,25 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Aquacheck ID: **20260520162800**
 - Aquacheck version : Mk4 v1
 
+### Test 8 — Wi-Fi
+
+- Type: Wi-Fi
+- Git branch : Refactoring
+- Git commit : 8ad7c2313a273d4
+- Start time: **26/08/2026 02:36 PM UTC+2**
+- Stop time:
+- Total duration:
+- Battery used: **B**
+- Battery tension just before it start: **4V**
+- Battery tension after it dies:
+- Aquacheck number: **13**
+- Aquacheck ID: **20260826114655**
+- Aquacheck version : Mk4 v2
+
+!!! info
+
+    This test use an upgraded version of Aquacheck Mk4 (AMk4 v2). It should be better in terms of batterie lifetime.
+
 ## Experimentation: LoRa Aquacheck Mk3 Battery longevity test
 
 !!! important
