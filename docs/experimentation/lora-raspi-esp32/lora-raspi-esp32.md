@@ -201,8 +201,8 @@ In this second test, I use the same battery, the same voltage and the same Aquac
 - Git branch : Refactoring
 - Git commit : 8ad7c2313a273d4
 - Start time: **26/08/2026 02:36 PM UTC+2**
-- Stop time:
-- Total duration:
+- Stop time: **12/09/2026 08:48 AM UTC+2**
+- Total duration: **16 days, 18 hours, 12 minutes**
 - Battery used: **B**
 - Battery tension just before it start: **4V**
 - Battery tension after it dies:
