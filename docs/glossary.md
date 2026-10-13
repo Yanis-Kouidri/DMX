@@ -352,9 +352,17 @@ A mix between SNR and SIR.
 
 SIR is the ratio between the signal strength a receiver wants to pick up and the strength of other unwanted signals. It differs from SNR (Signal-to-Noise Ratio), which measures the ratio of signal strength to background noise. Unlike interference, noise is a natural phenomenon that does not come from other transmitting stations.
 
-## SNR
+## SNR (Signal-to-Noise Ratio)
 
-Signal to Noise Ratio, metric to evaluate the quality of a radio link. Higher is better.
+SNR (Signal-to-Noise Ratio) is a metric used to evaluate the quality of a radio link. It compares the power of the desired signal to the power of the background noise (thermal noise from the environment and the receiver electronics). Higher is better. It is usually expressed in decibels (dB):
+
+$$
+SNR_{dB} = 10 \log_{10}\left(\frac{P_{signal}}{P_{noise}}\right) = P_{signal\ (dBm)} - P_{noise\ (dBm)}
+$$
+
+Unlike RSSI, which measures the total received power (signal + noise + interference), SNR tells how distinguishable the signal is from the noise. Therefore, a link can have a weak RSSI but still a good SNR in a quiet environment, and conversely. When interference from other transmitters is also taken into account, SIR and SINR are used instead.
+
+An SNR of $0\text{ dB}$ means the signal and the noise have the same power. Most modulations (e.g., Wi-Fi, Bluetooth) need a positive SNR to decode a packet, whereas LoRa, thanks to its Chirp Spread Spectrum (CSS) modulation, can demodulate signals **below the noise floor**. The minimum SNR required depends on the Spreading Factor: from about $-7.5\text{ dB}$ at SF7 to $-20\text{ dB}$ at SF12. This is one of the reasons why LoRa reaches long ranges, and why LoRaWAN uses the SNR margin in its ADR mechanism to choose the most suitable SF.
 
 ## Source routing
 
