@@ -2,7 +2,7 @@
 
 ## 3GPP
 
-3rd Generation Partnership Project, organism that standardized mobile networks (3G/4G/5G/6G)
+3rd Generation Partnership Project, organization that standardized mobile networks (3G/4G/5G/6G)
 
 ## ABP (Activation By Personalization)
 
@@ -23,7 +23,7 @@ Examples:
 
 ## ALOHA
 
-ALOHA is a very simple Medium Access Control (MAC) protocol. It works with random access to support, when a station has to transmit a message, it transmits without sensing the channel prior. Collision are frequent, so the reliability rely on ACK messages. In pure ALOHA the maximum throughput is about 18.4% of the channel bandwidth. Pure ALOHA is used in LoRaWAN.
+ALOHA is a very simple Medium Access Control (MAC) protocol. It works with random access to support, when a station has to transmit a message, it transmits without sensing the channel prior. Collisions are frequent, so the reliability relies on ACK messages. In pure ALOHA the maximum throughput is about 18.4% of the channel bandwidth. Pure ALOHA is used in LoRaWAN.
 
 ## ATSR
 
@@ -43,7 +43,7 @@ Autonomous Underwater Vehicle
 
 ## Bundle layer
 
- Bundle layer is used in DTN to perform **store-carry-and-forward**. It sits between application layer and lower-level networking layer. Whereas regular networks such as Internet, application layer (e.g., HTTP) talk directly to transport layer (e.g., TCP), DTN add bundle layer with bundle protocol and **Convergence Layer Adapters** (CLA). CLA enable **Bundle Protocol** to run on top of anything (e.g., TCP, UDP, CCSDS, Data mule).
+Bundle layer is used in DTN to perform **store-carry-and-forward**. It sits between application layer and lower-level networking layer. In regular networks such as the Internet, the application layer (e.g., HTTP) talks directly to transport layer (e.g., TCP), DTN add bundle layer with bundle protocol and **Convergence Layer Adapters** (CLA). CLA enable **Bundle Protocol** to run on top of anything (e.g., TCP, UDP, CCSDS, Data mule).
 
 ## CA-ETX
 
@@ -51,20 +51,20 @@ Contact Aware Expected Transmission Count, improvement of ETX metric by taking i
 
 ## CLA
 
- Convergence Layer Adapter, the CLA act like glue between Bundle Protocol and anything under. Bundle Protocol is designed to be **agnostic**. The role of CLA is to encapsulate, manage connection, discover neighbor and sometimes add reliability. It exists different CLA such as TCP CLA, Bluetooth/BLE CLA, LTP CLA and HTTP/Web CLA.
+Convergence Layer Adapter, the CLA acts as glue between Bundle Protocol and anything under. Bundle Protocol is designed to be **agnostic**. The role of CLA is to encapsulate, manage connection, discover neighbor and sometimes add reliability. There are different CLAs such as TCP CLA, Bluetooth/BLE CLA, LTP CLA and HTTP/Web CLA.
 
 ## CoAP
 
-CoAP stands for Constrained Application Protocol, it's a web protocol tailored for IoT. Whereas HTTP is heavyweight, CoAP is lightweight. For example, it uses UDP instead of TCP, short header, and DTLS for security.
+CoAP stands for Constrained Application Protocol, it's a web protocol tailored for IoT. Whereas HTTP is heavyweight, CoAP is lightweight. For example, it uses UDP instead of TCP, short headers, and DTLS for security.
 CoAP uses the same REST architecture as HTTP (it natively supports GET, POST, PUT, DELETE).
 
 ## CSA
 
-CSA stands for Connectivity Standard Alliance. It's a non-profit company that gather 600 company working on IoT. Its goal is to create and maintain standard to facilitate communication between IoT devices.
+CSA stands for Connectivity Standards Alliance. It's a non-profit organization that gathers over 600 companies working on IoT. Its goal is to create and maintain standards to facilitate communication between IoT devices.
 
 ## CSMA
 
-CSMA (Carrier Sense Multiple Access) is a Media Access Control (MAC) protocol where nodes check (sense) the shared channel for activity before transmitting to reduce collisions. If the channel is busy, the node waits; if idle, it transmits. Common variants handle collision handling differently:
+CSMA (Carrier Sense Multiple Access) is a Medium Access Control (MAC) protocol where nodes check (sense) the shared channel for activity before transmitting to reduce collisions. If the channel is busy, the node waits; if idle, it transmits. Common variants handle collision handling differently:
 
 - CSMA/CD (Collision Detection): Aborts transmission immediately when a collision is detected (legacy Ethernet).
 - CSMA/CA (Collision Avoidance): Uses random back off times and acknowledgments to avoid collisions altogether (Wi-Fi).
@@ -72,7 +72,7 @@ CSMA (Carrier Sense Multiple Access) is a Media Access Control (MAC) protocol wh
 
 ## Data mule
 
- Data mule is a mobile node such as a person, a bus, a drone, etc. It carries physically the data from a source to a destination. It's particularly convenient in remote area where direct wires and wireless (e.g., 5G, 4G) communication are not possible.
+Data mule is a mobile node such as a person, a bus, a drone, etc. It carries physically the data from a source to a destination. It's particularly convenient in remote area where direct wires and wireless (e.g., 5G, 4G) communication are not possible.
 
 ## DECT
 
@@ -86,19 +86,19 @@ Whereas classical ML is excellent for Structured Data (things you find in Excel 
 
 ## DER (Data Extraction Rate)
 
-DER is the equivalent of PDR (Packet Delivery Ration) at an applicative layer such as Network Server in LoRaWAN.
+DER is the equivalent of PDR (Packet Delivery Ratio) at an applicative layer such as Network Server in LoRaWAN.
 
 ## DOP
 
-Dilution Of Precision, In context of GNSS and wireless positioning, DOP is a mathematical value that represents the quality of geometry depending on anchors (such as satellites or UAV) position. When anchor are spread all around the user, geometry is good so DOP is low. If anchors are clustered close together or on a same line, geometry is poor, so DOP is high and the computed position of user is uncertain.
+Dilution Of Precision, In context of GNSS and wireless positioning, DOP is a mathematical value that represents the quality of geometry depending on anchors (such as satellites or UAV) position. When anchors are spread all around the user, geometry is good so DOP is low. If anchors are clustered close together or on a same line, geometry is poor, so DOP is high and the computed position of user is uncertain.
 
 ## DTN
 
- Delay Tolerant Network, DTN is a specific type of network architecture to operate where there is no guarantee of end to end communication such as on Intermittently Connected Networks (ICN). Whereas regular networks such as Internet will just drop a packet if the next hop is not connected, DTN will use the mechanism of **store-carry-and-forward** to transmit a packet when the next hop will be reachable. A node will receive data from another node, wait a time form minutes to days then, once connection is established, forward the packet to the next node. DTN use **bundle layer** on top of transport layer acting as an overlay.
+Delay Tolerant Network, DTN is a specific type of network architecture to operate where there is no guarantee of end to end communication such as on Intermittently Connected Networks (ICN). Whereas regular networks such as Internet will just drop a packet if the next hop is not connected, DTN will use the mechanism of **store-carry-and-forward** to transmit a packet when the next hop will be reachable. A node will receive data from another node, wait a time from minutes to days then, once connection is established, forward the packet to the next node. DTN use **bundle layer** on top of transport layer acting as an overlay.
 
 ## Duty-cycling (sleep/wake up)
 
-In case of a sensor, it's a technic to alternate between wake and sleep cycle in order to save battery instead of being always wake. However, during sleep cycle sensor cannot sense neither communicate through radio.
+In case of a sensor, it's a technique to alternate between wake and sleep cycles in order to save battery instead of being always awake. However, during the sleep cycle the sensor can neither sense nor communicate through radio.
 
 ## EMQX
 
@@ -106,11 +106,11 @@ In case of a sensor, it's a technic to alternate between wake and sleep cycle in
 
 ## End device, end node
 
-In an LPWAN context, an end device (or end node) refers to IoT device and are connected to one or several gateways.
+In an LPWAN context, an end device (or end node) refers to an IoT device connected to one or several gateways.
 
 ## ETX
 
-Expected Transmission Count, metric that estimate the number of transmission required to send a message over one link at an instant T. ETX = 1 → perfect link, ETX = 2 → 50% of packets are lost, etc.
+Expected Transmission Count, metric that estimates the number of transmissions required to send a message over one link at an instant T. ETX = 1 → perfect link, ETX = 2 → 50% of packets are lost, etc.
 
 ## FANET
 
@@ -123,19 +123,19 @@ FBL stands for Finite BlockLength. A paradigm contrasted with Infinite Blockleng
 ## Feature extraction
 
 Feature extraction is the process to extract key characteristics from raw data for the computer to use them to take decision. Example: for dog Vs. cat model, feature could be shape, size and textures.  
-In ML, it is to the user to extract features. This is called feature engineering. In DL it's the role of the neural network.
+In ML, it is up to the user to extract features. This is called feature engineering. In DL it's the role of the neural network.
 
 ## FUOTA
 
-FUOTA stand for Firmware Update Over-The-Air. It's a technique to update an IoT device without plugging any cable. It uses regular wireless access such as Wi-Fi LoRaWAN or Sigfox to send the new firmware.
+FUOTA stands for Firmware Update Over-The-Air. It's a technique to update an IoT device without plugging any cable. It uses regular wireless access such as Wi-Fi, LoRaWAN or Sigfox to send the new firmware.
 
 ## GDR RSD
 
-GDR RSD stands for Groupement De Recherche Réseaux et Systèmes Distribués. It's an animation structure attached to the CNRS. Its goal is to animate and federate the French community research around network and distributed systems. It organizes for example the GDR RSD Days.
+GDR RSD stands for Groupement De Recherche Réseaux et Systèmes Distribués. It's a research network attached to the CNRS. Its goal is to animate and federate the French research community around network and distributed systems. It organizes for example the GDR RSD Days.
 
 ## HAPS
 
- High-Altitude Platform Stations, HAPS are unmaned vehicles that hover in the stratosphere, roughly 20 km above the Earth. It can be solar-powered drone or giant balloons.
+High-Altitude Platform Stations, HAPS are unmanned vehicles that hover in the stratosphere, roughly 20 km above the Earth. It can be solar-powered drone or giant balloons.
 
 ## Hop-by-hop routing
 
@@ -144,11 +144,11 @@ Instead of the sender pre-mapping the entire path, each router along the way ind
 
 ## ISM bands
 
-Industry Science and Medical frequency bands open to used without any prior authorization or license.
+Industry Science and Medical frequency bands open to use without any prior authorization or license.
 
 ## KNN
 
-K-Nearest Neighbor, algorithm used to identify if a variable or a vector (several variables) is normal or is abnormal (anomaly detection)
+K-Nearest Neighbors, algorithm used for classification and regression that labels a sample according to its K closest neighbors. It can also be used for anomaly detection, to identify if a variable or a vector (several variables) is normal or abnormal.
 
 ## LoS
 
@@ -156,15 +156,15 @@ Line of Sight, in telecommunication, LoS refers to a clear and unobstructed path
 
 ## LPWAN
 
-Low Power Wide Area Network, network using long range and low power wireless communications such as LoRaWan, LTE-M, NB-IoT, Sigfox. See [Wikipedia](https://en.wikipedia.org/wiki/Low-power_wide-area_network)
+Low Power Wide Area Network, network using long range and low power wireless communications such as LoRaWAN, LTE-M, NB-IoT, Sigfox. See [Wikipedia](https://en.wikipedia.org/wiki/Low-power_wide-area_network)
 
 ## LR-FHSS
 
-LR-FHSS stand for Long Range — Frequency Hopping Spread Spectrum. It's a radio protocol design to extend LoRaWAN networks capacities. It's an alternative to legacy CSS (Chirp Spread Spectrum) use by default in LoRaWAN. It's manly use to Direct-to-Satellite communication. LR-FHSS is highly resistant to Doppler effect, resist more to interference and have approximately the same range à CSS but has a lower throughput.
+LR-FHSS stands for Long Range — Frequency Hopping Spread Spectrum. It's a radio protocol designed to extend LoRaWAN network capacity. It's an alternative to legacy CSS (Chirp Spread Spectrum) used by default in LoRaWAN. It's mainly used for Direct-to-Satellite communication. LR-FHSS is highly resistant to the Doppler effect, more resistant to interference and has approximately the same range as CSS but a lower throughput.
 
 ## LSTM
 
-Long Short-Therm Memory, IA model to perform prediction
+Long Short-Term Memory, AI model to perform prediction
 
 ## LTE-M
 
@@ -172,7 +172,7 @@ Long Term Evolution for Machine, LPWAN technology developed by the 3GPP for IoT 
 
 ## LWSN
 
-Linear Wireless Sensor Network, network of wireless sensors arrange linearly.
+Linear Wireless Sensor Network, network of wireless sensors arranged linearly.
 
 ## Machine Learning (ML)
 
@@ -180,55 +180,55 @@ Machine Learning is a branch of Artificial Intelligence (AI) focused on developi
 The learning can be:
 
 - **Supervised Learning**: In this approach, the algorithm is trained on a labeled dataset, where each input is paired with its corresponding correct output (ground truth). The goal is for the model to learn a mapping function that can predict labels for new data. Example: Feeding an algorithm thousands of images tagged "dog" or "cat" so it learns to classify future images.
-- **Non supervised Learning**: This paradigm involves training on unlabeled data. The algorithm must independently discover the underlying structure or hidden patterns within the data. Primary Technique: **Clustering**, which groups data points based on shared characteristics or features (e.g., grouping photos by visual similarity without knowing what the objects are).
+- **Unsupervised Learning**: This paradigm involves training on unlabeled data. The algorithm must independently discover the underlying structure or hidden patterns within the data. Primary Technique: **Clustering**, which groups data points based on shared characteristics or features (e.g., grouping photos by visual similarity without knowing what the objects are).
 - **Reinforcement Learning (RL)**: This is an agent-based learning method where a system learns to achieve a goal in a dynamic environment through trial and error. The agent receives feedback in the form of rewards or penalties based on the actions it takes, allowing it to optimize its strategy (policy) over time.
 
 Traditional programming uses Rules + Data = Answers. Machine Learning flips the script: Data + Answers = Rules.
 
 ## Matter
 
-Applicative layer protocol working over IPv6. It's come from an open norm in order to connect IoT domotics objects from different brands. Create by the CSA.
+Application layer protocol working over IPv6. It comes from an open standard designed to connect smart home devices from different brands. Created by the CSA.
 
 ## MBN
 
-Mobile Backbone Network, mobile communication backbone by opposition of static communication backbone such as 4G/5G antennas.
+Mobile Backbone Network, mobile communication backbone as opposed to a static communication backbone such as 4G/5G antennas.
 
 ## MEC
 
-Mobile Edge Computing, strategy focussing on binging computational power closer the network border (therefore closer to the user)
+Multi-access Edge Computing (formerly Mobile Edge Computing), strategy focusing on bringing computational power closer to the network edge (therefore closer to the user)
 
 ## Meshcore
 
-Meshcore is an alternative the MeshTastic, it works on the same device and use LoRaWAN but include more hierarchy and structure to reduce the noise due to the flood. Clients don't repeat received message, only repeater can do that and a room server store the messages.
+Meshcore is an alternative to MeshTastic, it works on the same devices and uses LoRa but includes more hierarchy and structure to reduce the noise due to flooding. Clients don't repeat received messages, only repeaters can do that, and a room server stores the messages.
 
 ## MeshTastic
 
-MeshTastic is an open source project to create a decentralized wireless communication network without any physical infrastructure. It uses LoRa over a mesh network. MeshTastic is a MANET (Mobile Ad hoc NETwork) because node are mobile, and it doesn't rely on a preexisting physical infrastructure.
+MeshTastic is an open source project to create a decentralized wireless communication network without any physical infrastructure. It uses LoRa over a mesh network. MeshTastic is a MANET (Mobile Ad hoc NETwork) because nodes are mobile, and it doesn't rely on a preexisting physical infrastructure.
 
 ## mioty
 
-mioty is an LPWAN technology developed by the German institute Fraunhofer IIS and normalized by ETSI. The physical layer relies on TSMA (Telegram Splitting Multiple Access), a patented transmission method that splits messages into tiny sub-packets. It operates on **unlicensed ISM bands**, has **extreme resistance** to noise and interference, and was designed for **massive IoT deployment**.
+mioty is an LPWAN technology developed by the German institute Fraunhofer IIS and standardized by ETSI. The physical layer relies on TSMA (Telegram Splitting Multiple Access), a patented transmission method that splits messages into tiny sub-packets. It operates on **unlicensed ISM bands**, has **extreme resistance** to noise and interference, and was designed for **massive IoT deployment**.
 
 Unlike LoRa, which requires proprietary Semtech hardware, mioty’s physical layer is software-defined and can run on standard sub-GHz radio chips from multiple vendors. However, the core TSMA technology is protected by patents (licensed through a Sisvel patent pool), and commercial software stacks usually need to be purchased from stack vendors while LoRaWAN stack is completely open. That said, it is still possible to use basic mioty stacks for free in non-commercial or academic contexts.
 
 ## mMTC
 
-mMTC stands for massive Machine Type Communication. It's a type of network that allow huge number of IoT device in the same area such as 1 million by km². It's a core part of 5G and 6G, defined by 3GPP.
+mMTC stands for massive Machine Type Communication. It's a type of network that allows a huge number of IoT devices in the same area, such as 1 million per km². It's a core part of 5G and 6G, defined by 3GPP.
 
 ## MNT
 
-MNT stands for Multi Technology Network, it means a network the rely on several underlying technology such as Wi-Fi, Ethernet, LoRaWAN etc.
+MNT stands for Multi Technology Network, it means a network that relies on several underlying technologies such as Wi-Fi, Ethernet, LoRaWAN etc.
 
 ## Mote
 
-A mote is a sensor that have 4 things:
+A mote is a sensor that has 4 things:
 
 - A sensor equipment to measure a metric such as temperature or humidity.
 - A radio module to communicate remotely.
-- A source of energy such has battery.
+- A source of energy such as a battery.
 - A microcontroller unit to handle sensing, data transmission and sleep cycle.
 
-Mote are end device on an IoT network.
+Motes are end devices on an IoT network.
 
 ## MPLS
 
@@ -238,7 +238,7 @@ Instead of having every intermediate router read the full IP destination and con
 
 ## MPTCP
 
-Multi-Path Transmission Control Protocol, an extension of standard TCP allowing to use simutiniouslty multiple network paths to reach the destination.
+Multi-Path Transmission Control Protocol, an extension of standard TCP allowing the simultaneous use of multiple network paths to reach the destination.
 
 ## Multi-armed bandit (MAB)
 
@@ -246,7 +246,7 @@ In AI, the Multi-Armed Bandit is a classic reinforcement learning problem where 
 
 ## MWSN
 
-Mobile Wireless Sensor Network, network of mobile wireless sensors by opposition of fixed sensors.
+Mobile Wireless Sensor Network, network of mobile wireless sensors as opposed to fixed sensors.
 
 ## NB-IoT
 
@@ -254,7 +254,7 @@ Narrow Band Internet of Things, is a LPWAN technology developed by the 3GPP for 
 
 ## NDN
 
- Named Data Networking, in regular network such as IP, to access a data, you use its location, the where. In NDN, to get a data, you specify what you want, no matter where it is. There are neither source nor destination address, just interested data. Each NDN router record which port request which data on its Pending Interest Table (PIT) and forward it to the next interface using FIB (Forwarding Information Base). Router can cache data previously requested.
+Named Data Networking, in regular network such as IP, to access a data, you use its location, the where. In NDN, to get a data, you specify what you want, no matter where it is. There are neither source nor destination address, just interested data. Each NDN router records which port requests which data in its Pending Interest Table (PIT) and forwards it to the next interface using FIB (Forwarding Information Base). Routers can cache data previously requested.
 
 ## Neural network
 
@@ -262,15 +262,15 @@ A neural network is a digital imitation of the human brain. It is composed of se
 
 ## NTN
 
- Non-Terrestrial Network, NTN is a telecommunication system that uses spaceborne or airborne vehicle such as satellite or HAPS to transmit signals, rather than relying on traditional ground-based cell towers. It becomes handy in places where traditional networks are impossible to set up such as deep forest, ocean, remote area and high-altitude. NTN rely on LEO (Low Earth Orbit), MEO (Medium Earth Orbit) and GEO (Geostationary) satellites. It also relies on HAPS (High-Altitude Platform Stations).
+Non-Terrestrial Network, NTN is a telecommunication system that uses spaceborne or airborne vehicle such as satellite or HAPS to transmit signals, rather than relying on traditional ground-based cell towers. It becomes handy in places where traditional networks are impossible to set up such as deep forest, ocean, remote area and high-altitude. NTN rely on LEO (Low Earth Orbit), MEO (Medium Earth Orbit) and GEO (Geostationary) satellites. It also relies on HAPS (High-Altitude Platform Stations).
 
 ## OBC
 
-Opportunistic Backpressure Protocol, routing protocol using CA-ETX metric.
+Opportunistic Backpressure Collection, routing protocol using CA-ETX metric.
 
 ## Opportunistic routing (OR)
 
- Opportunistic routing is an approach to move data through a network using broadcast nature of wireless communications. In traditional routing approach. A single path is defined between source and destination and used to carry data. That works well and reliable infrastructure such as cable but in wireless communication, a link can fail. Therefore OR uses a candidate set of potential forwarders. It works in three step :
+Opportunistic routing is an approach to move data through a network using broadcast nature of wireless communications. In the traditional routing approach, a single path is defined between source and destination and used to carry data. That works well on reliable infrastructure such as cable but in wireless communication, a link can fail. Therefore OR uses a candidate set of potential forwarders. It works in three steps:
 
 1. **Broadcast**: The sender broadcasts the data packet. Any neighbor in the “candidate set” that successfully receives it becomes a potential relay.
 2. **Coordination**: The nodes that heard the message talk to each other (or use timers) to decide who is in the best position to move the data closer to the destination.
@@ -284,10 +284,10 @@ OTAA is a dynamic and secure authentication method used in LPWANs such as LoRaWA
 
 ## PDR
 
-Packet Delivery Ration also called PSR (Packet Success Ration). Network metric to measure how much packet are successfully delivered to the destination compared to the total number of packet sent.
+Packet Delivery Ratio also called PSR (Packet Success Ratio). Network metric to measure how many packets are successfully delivered to the destination compared to the total number of packets sent.
 
 $$
-PDR = \frac{Number\ Of\ Packet\ Successufly\ Received}{Number\ Of\ Packet\ Sent} * 100
+PDR = \frac{Number\ Of\ Packet\ Successfully\ Received}{Number\ Of\ Packet\ Sent} * 100
 $$
 
 ## Regulatory Duty-cycle
@@ -304,7 +304,7 @@ RFID Near Field Communication, technology using RFID chip to communicate on a ve
 
 ## RFID UHF
 
-RFID Ultra High Frequency, technology using RFID chip to identify object using UHF bands that allow range until 15 meters.
+RFID Ultra High Frequency, technology using RFID chip to identify object using UHF bands that allow a range up to 15 meters.
 
 ## RODENT
 
@@ -320,11 +320,11 @@ Values typically range from around $-30\text{ dBm}$ (very strong) to $-100\text{
 
 ## SAW sensor
 
-Surface Acoustic Wave sensor, it's a passive sensor (without battery) that can perform a measure and sent back the information only thanks to an electromagnetic wave sent by the collector.
+Surface Acoustic Wave sensor, it's a passive sensor (without battery) that can perform a measurement and send back the information only thanks to an electromagnetic wave sent by the collector.
 
 ## SCA
 
-Successive Convex Approximation, operations research algorithm that allow to transform a complex problem (non-convex) into a simple one (convex)
+Successive Convex Approximation, operations research algorithm that allows transforming a complex problem (non-convex) into a simple one (convex)
 
 ## SCHC
 
@@ -332,7 +332,7 @@ SCHC stands for Static Context Header Compression and Fragmentation ([RFC 8724](
 
 ## Segment Routing
 
-Segment Routing is a specific implementation of source routing where the source specifies the segments to use instead to specify the whole IP address stack of each router to cross.
+Segment Routing is a specific implementation of source routing where the source specifies the segments to use instead of specifying the whole IP address stack of each router to cross.
 
 ## SID
 
@@ -342,23 +342,23 @@ Instead of just pointing to a destination address, a SID represents a specific n
 
 ## Sigfox
 
-Sigfox is a proprietary LPWAN technology that works over unlicenced bands. Sigfox is a company that's own it's private network and managed it. The user only has to by a Sigfox antenna and a subscription to the service, then Sigfox relay the received data to an internet endpoint the client choose.
+Sigfox is a proprietary LPWAN technology that works over unlicensed bands. Sigfox is a company that owns its private network and manages it. The user only has to buy a Sigfox antenna and a subscription to the service, then Sigfox relays the received data to an internet endpoint the client chooses.
 
 ## SINR (Signal to Interference plus Noise Ratio)
 
 A mix between SNR and SIR.
 
-## SIR (Signal-Interference Ratio)
+## SIR (Signal-to-Interference Ratio)
 
 SIR is the ratio between the signal strength a receiver wants to pick up and the strength of other unwanted signals. It differs from SNR (Signal-to-Noise Ratio), which measures the ratio of signal strength to background noise. Unlike interference, noise is a natural phenomenon that does not come from other transmitting stations.
 
 ## SNR
 
-Signal to Noise Ration, metric to evaluate the quality of a radio link. Higher is better.
+Signal to Noise Ratio, metric to evaluate the quality of a radio link. Higher is better.
 
 ## Source routing
 
-Source routing is the opposite approach as hop-by-hop routing: instead of relying on each router to decide the next hop, the sender (the source) pre-determines the entire path the packet must take across the network.
+Source routing is the opposite approach to hop-by-hop routing: instead of relying on each router to decide the next hop, the sender (the source) pre-determines the entire path the packet must take across the network.
 
 The sender embeds an ordered list of router IP addresses or interfaces directly into the packet's header. As intermediate routers receive the packet, they simply follow the explicit turn-by-turn directions written on the packet itself rather than performing independent routing decisions.
 
@@ -369,7 +369,7 @@ There are two main variations:
 
 ## Spreading Factor (SF)
 
-The Spreading Factor is a parameter that defined the ratio between the transmission (throughput) and range. In LoRa, the Spreading Factor is between 7 and 12. At SF7 the throughput is high (~5 kbps) but the range is low (~2 km). At SF12 the throughput is low (~250 bps) but the range is high (+15 km). A high SF (SF12) lead to higher time on air and higher consumption. That's also consume more of the device duty cycle.
+The Spreading Factor is a parameter that defines the trade-off between throughput and range. In LoRa, the Spreading Factor is between 7 and 12. At SF7 the throughput is high (~5 kbps) but the range is low (~2 km). At SF12 the throughput is low (~250 bps) but the range is high (+15 km). A high SF (SF12) leads to higher time on air and higher consumption. It also consumes more of the device duty cycle.
 
 ## SRv6
 
@@ -387,7 +387,7 @@ ToA is the exact duration a radio transmitter actively occupies a channel to sen
 
 ## TOPSIS
 
-TOPSIS stand for Technique for Order of Preference by Similarity to Ideal Solution. A mathematical multi-attribute decision-making method. Example: Selecting a route for a routing protocol.
+TOPSIS stands for Technique for Order of Preference by Similarity to Ideal Solution. A mathematical multi-attribute decision-making method. Example: Selecting a route for a routing protocol.
 
 ## TTN (The Things Network)
 
@@ -399,7 +399,7 @@ UART is a hardware serial communication protocol used for data transmission. It 
 
 ## UAV
 
- Unmanned Aerial Vehicle, UAV are most commonly named drone. It's an aircraft that operates without human on board. However, it can be controlled remotely by a human pilot or flight autonomously by onboard computers and pre-programmed flight plans.
+Unmanned Aerial Vehicle, UAVs are commonly called drones. It's an aircraft that operates without a human on board. However, it can be controlled remotely by a human pilot or fly autonomously by onboard computers and pre-programmed flight plans.
 
 ## Uruha
 
@@ -415,11 +415,11 @@ VSAT stands for Very Small Aperture Terminal. It's a small satellite dish (typic
 
 ## Wireless M-Bus (WM-Bus)
 
-Wireless M-Bus is an open standard (EN 13757-4) optimized for automatic reading of meter such heating meter or water consumption meter. It operates over free bands such as 868 MHz, and it's design to last for a long time (up to 10 years). It works with a star topology where it sends periodically his data to the gateway. Furthermore, it's always the meter who sends the data to the gateway, never the opposite. The WM-Bus range is around 40 meters indoors ans 800m outdoor in free field.
+Wireless M-Bus is an open standard (EN 13757-4) optimized for automatic reading of meters such as heating meters or water consumption meters. It operates over free bands such as 868 MHz, and it's designed to last for a long time (up to 10 years). It works with a star topology where it periodically sends its data to the gateway. Furthermore, it's always the meter who sends the data to the gateway, never the opposite. The WM-Bus range is around 40 meters indoors and 800 m outdoor in free field.
 
 ## WSN
 
- Wireless Sensor Networks, a WSN is a self-organized collection of small physical devices called nodes. They work together to monitor an environmental phenomenon such as temperature, humidity, vibration, air quality etc. Most of the time these nodes aren't plugged to the grid so are energy-constrained. Nodes send their data using **radio frequency links** to one or several sinks that make the link between the WSN and another network such as internet. The sink can be fixed or mobile. Nodes can also be mobile for fauna monitoring for example.
+Wireless Sensor Networks, a WSN is a self-organized collection of small physical devices called nodes. They work together to monitor an environmental phenomenon such as temperature, humidity, vibration, air quality etc. Most of the time these nodes aren't plugged to the grid so are energy-constrained. Nodes send their data using **radio frequency links** to one or several sinks that make the link between the WSN and another network such as internet. The sink can be fixed or mobile. Nodes can also be mobile for fauna monitoring for example.
 
 ## WSN-MS
 
@@ -427,4 +427,4 @@ Wireless Sensors Network with Mobile Sinks.
 
 ## WuR
 
-Wake up Radio, low-energy radio in order to listen and wake up the sensor when a mobile sink come close. No payload data will be transmitted through this radio, its only role is to be able to wake up the sensor during its sleeping cycle.
+Wake up Radio, low-energy radio in order to listen and wake up the sensor when a mobile sink comes close. No payload data will be transmitted through this radio, its only role is to be able to wake up the sensor during its sleeping cycle.
