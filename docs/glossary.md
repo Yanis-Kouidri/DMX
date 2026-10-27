@@ -150,6 +150,10 @@ Industry Science and Medical frequency bands open to use without any prior autho
 
 K-Nearest Neighbors, algorithm used for classification and regression that labels a sample according to its K closest neighbors. It can also be used for anomaly detection, to identify if a variable or a vector (several variables) is normal or abnormal.
 
+## LNS (LoRaWAN Network Server)
+
+The LNS is the core of a LoRaWAN network. It receives the frames forwarded by the gateways, removes duplicates when several gateways receive the same frame, verifies message integrity (MIC) with the network session keys, manages Adaptive Data Rate (ADR) and MAC commands, and routes the payloads to the appropriate Application Server. It also selects the best gateway to send downlink messages. Examples of LNS include The Things Stack (used by TTN), ChirpStack and AWS IoT Core for LoRaWAN. See [Network Server (NS)](subjects/lora.md#network-server-ns).
+
 ## LoS
 
 Line of Sight, in telecommunication, LoS refers to a clear and unobstructed path between the transmitter and the receiver antenna.
