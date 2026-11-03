@@ -20,8 +20,7 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Next one**:
 
-- October 26–30, 2026 — Austin, Texas, USA
-- October 2027 — Unknown location
+- October 18–22, 2027 — Unknown location
 
 ### ACM MobiHoc
 
@@ -54,7 +53,7 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Next one**:
 
-- August 17–21, 2026 — Denver, Colorado, USA
+- August 8–12, 2027 — Bangkok, Thailand
 
 ### EWSN
 
@@ -68,7 +67,7 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Next one**:
 
-- September 16–18, 2026 — Dresden, Germany
+- 2027 — Unknown location
 
 ### IEEE INFOCOM
 
@@ -82,7 +81,6 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Next one**:
 
-- May 18–22, 2026 — Tokyo, Japan
 - May 24-27, 2027 — Honolulu, Hawaii, USA
 
 ### IEEE LCN
@@ -97,7 +95,7 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Next one**:
 
-- October 7–9, 2026 — Coimbra, Portugal
+- 2027 — Unknown location
 
 ### IEEE CCNC
 
@@ -111,7 +109,6 @@ This page list principal conferences and journals linked to my PhD subject (WSN,
 
 **Next one**:
 
-- January 9–12, 2026 — Las Vegas, Nevada, USA
 - January 9–12, 2027 — Las Vegas, Nevada, USA
 
 ### IEEE ICC
@@ -136,8 +133,7 @@ AI/ML for Communications
 
 **Next one**:
 
-- May 24-28, 2026 — Glasgow, Scotland, UK
-- May 30-June 3 — Washington, District of Columbia, USA
+- May 30-June 3, 2027 — Washington, District of Columbia, USA
 
 ### IEEE Globecom
 
@@ -172,8 +168,7 @@ AI/ML for Communications
 
 **Next one**:
 
-- June 22-25, 2026 — Messina, Italy
-- January 27-30, 2026 — Udaipur, India
+- 2027 — Unknown location
 
 ### IEEE Sensors
 
@@ -187,7 +182,7 @@ AI/ML for Communications
 
 **Next one**:
 
-- October 25–28, 2026 — Rotterdam, Netherlands
+- October 24–27, 2027 — Sydney, Australia
 
 ### IEEE APSCON
 
@@ -220,7 +215,7 @@ AI/ML for Communications
 
 **Next one**:
 
-- May 24-27, 2026 — Lugano, Switzerland
+- June 13-16, 2027 — Dublin, Ireland
 
 ### MSWiM
 
@@ -234,7 +229,7 @@ AI/ML for Communications
 
 **Next one**:
 
-- October 26–30, 2026 — Paris, France
+- 2027 — Unknown location
 
 ## Journals :newspaper:
 
