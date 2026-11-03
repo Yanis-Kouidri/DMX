@@ -79,13 +79,17 @@ To summarize
 
 ## Step 3: Configure LoRa Module
 
+!!! note
+
+    The scripts and systemd services used in this experiment are no longer maintained and have been removed from the repository. They are still available in the git history: [`code/`](https://github.com/Yanis-Kouidri/DMX/tree/ddec3dc/docs/experimentation/lora-raspi-raspi/code) and [`services/`](https://github.com/Yanis-Kouidri/DMX/tree/ddec3dc/docs/experimentation/lora-raspi-raspi/services).
+
 Install uv once on each raspi
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Install dependencies, go in `DMX/docs/experimentation/code`
+Install dependencies, go in the `code` folder
 
 ```bash
 uv sync
@@ -96,12 +100,12 @@ In order to get RSSI and to set the same parameter such as UART rate (baud rate)
 To perform that, run on **both** receiver and sender:
 
 ```bash
-uv run congigure_lora_register.py
+uv run configure_lora_register.py
 ```
 
 ## Step 4: Run the code
 
-Go in `DMX/docs/experimentation/code` folder.
+Go in the `code` folder.
 
 Then run `send.py` on one raspi and `receive.py`, one the other one.
 
@@ -131,7 +135,7 @@ Stopping script...
 
 ## Step 5: Automate the script run at boot
 
-Copy `lora-receiver.service` (or `lora-sender.service`) into `/etc/systemd/system/`
+Copy [`lora-receiver.service`](https://github.com/Yanis-Kouidri/DMX/tree/ddec3dc/docs/experimentation/lora-raspi-raspi/services/lora-receiver.service) (or [`lora-sender.service`](https://github.com/Yanis-Kouidri/DMX/tree/ddec3dc/docs/experimentation/lora-raspi-raspi/services/lora-sender.service)) into `/etc/systemd/system/`
 
 Then run load the new configuration with
 
@@ -178,7 +182,7 @@ journalctl -u lora-sender.service
 ## Debug
 
 If message are not received make sure that both LoRa module have same configuration by executing `read_lora_register.py`.
-Go in `DMX/docs/experimentation/code` folder.
+Go in the `code` folder.
 
 ```bash
 uv run read_lora_register.py
@@ -221,7 +225,7 @@ Here are the logs:
 ??? info "Show logs"
 
     ```log
-    --8<-- "docs/experimentation/logs/walkout-1.log"
+    --8<-- "docs/experimentation/lora-raspi-raspi/logs/walkout-1.log"
     ```
 
 There is a small artifact at the beginning, the `-256 dBm` RSSI is irrelevant. However, all other RSSI looks relevant in comparison to how far I was from the sender.
@@ -244,7 +248,7 @@ It should be taken into account that this is not an open field; the receiver is 
 ??? info "Show logs (not completed)"
 
     ``` title="walkout-2.log"
-    --8<-- "docs/experimentation/logs/walkout-2.log"
+    --8<-- "docs/experimentation/lora-raspi-raspi/logs/walkout-2.log"
     ```
 
 **Analyze**: The LoRa module is supposed to received up to **-140 dBm** nevertheless I stop receiving as **-72 dBm**. So there is something. The most probable is the Fresnel zone that said that the signal is like an ellipsoid between sender and receiver, so ground absorb a lot of the signal strength. I will try to put the receiver upper to see if there is any difference.
@@ -281,6 +285,6 @@ The RSSI noise is all the radio energy on my working frequency that is not my si
 
 ??? info "Show logs of a walk around Neusta building"
 
-    ``` title="walkout-2.log"
-    --8<-- "docs/experimentation/logs/rssi_noise_1.log"
+    ``` title="rssi_noise_1.log"
+    --8<-- "docs/experimentation/lora-raspi-raspi/logs/rssi_noise_1.log"
     ```
