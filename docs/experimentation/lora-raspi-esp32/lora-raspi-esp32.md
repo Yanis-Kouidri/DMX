@@ -50,7 +50,7 @@ On startup it connects to **AWS IoT Core** over MQTT (port 8883, TLS with device
 
 The payload from the ESP32 is a semicolon-separated CSV string (`boitier_id; temperature; humidity; soil moisture; battery`). The script parses these fields, stamps the message with the **local reception time** (ISO 8601), computes **humidex** using the same formulas as the Aquacheck firmware, builds a JSON object (`type`, `ID`, sensor values, `humidex`, `batteryLevel`), and publishes it to the `aquacheck/pub` topic on AWS (QoS 1). Received messages and signal strength are logged to the console.
 
-Source: [`code/receive-and-send-to-aws.py`](code/receive-and-send-to-aws.py).
+Source: [`code/receive-and-send-to-aws.py`](https://github.com/Yanis-Kouidri/DMX/blob/ddec3dc/docs/experimentation/lora-raspi-esp32/code/receive-and-send-to-aws.py).
 
 !!! important
 
@@ -58,7 +58,7 @@ Source: [`code/receive-and-send-to-aws.py`](code/receive-and-send-to-aws.py).
 
 ## Aquacheck LoRa branch
 
-To run this architecture, I created a **new branch** on the **Aquacheck** firmware repository. That branch replaces the Wi-Fi/MQTT path with **LoRa**: the ESP32 wakes on the same schedule, reads the sensors, and sends a compact CSV frame to the E220 module. The **Raspberry Pi 5** receives it and forwards data to AWS via [`receive-and-send-to-aws.py`](code/receive-and-send-to-aws.py).
+To run this architecture, I created a **new branch** on the **Aquacheck** firmware repository. That branch replaces the Wi-Fi/MQTT path with **LoRa**: the ESP32 wakes on the same schedule, reads the sensors, and sends a compact CSV frame to the E220 module. The **Raspberry Pi 5** receives it and forwards data to AWS via [`receive-and-send-to-aws.py`](https://github.com/Yanis-Kouidri/DMX/blob/ddec3dc/docs/experimentation/lora-raspi-esp32/code/receive-and-send-to-aws.py).
 
 In this setup, the **Aquacheck unit no longer uses Wi-Fi at all** and does **not need Internet** to operate. Only the gateway Pi must be online (Wi-Fi or Ethernet) to reach AWS IoT Core.
 
